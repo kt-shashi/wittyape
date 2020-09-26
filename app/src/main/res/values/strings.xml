@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wittyape</string>
+    <string name="sign_in">Sign-In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign-Up</string>
+    <string name="helping_kids_excel">Helping Kids Excel</string>
+    <string name="wittyape">Wittyape</string>
+    <string name="display_name">Display Name</string>
+    <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+</resources>
