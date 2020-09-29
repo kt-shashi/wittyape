@@ -28,7 +28,7 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.sign_up_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
 
         buttonSignUp = view.findViewById(R.id.button_sign_up_fragment);
         textInputLayoutName = view.findViewById(R.id.text_input_layout_profile_sign_up);

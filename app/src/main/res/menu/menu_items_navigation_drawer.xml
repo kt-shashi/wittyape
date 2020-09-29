@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/submenu_home"
+        android:title="@string/primary">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_item_home"
+                android:icon="@drawable/icon_home"
+                android:title="@string/home" />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/submenu_subject"
+        android:title="@string/learn">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_item_maths"
+                android:icon="@drawable/icon_menu_maths"
+                android:title="@string/mathematics" />
+            <item
+                android:id="@+id/menu_item_english"
+                android:icon="@drawable/icon_menu_english"
+                android:title="@string/english" />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/submenu_others"
+        android:title="@string/others">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_item_help"
+                android:icon="@drawable/icon_help"
+                android:title="@string/help" />
+
+            <item
+                android:id="@+id/menu_item_exit"
+                android:icon="@drawable/icon_exit"
+                android:title="@string/exit" />
+
+        </menu>
+
+    </item>
+
+
+</menu>
