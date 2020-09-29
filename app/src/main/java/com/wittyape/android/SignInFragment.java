@@ -28,7 +28,7 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.sign_in_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
 
         buttonSignIn = view.findViewById(R.id.button_sign_in_fragment);
         textInputLayoutEmail = view.findViewById(R.id.text_input_layout_email_sign_in);
