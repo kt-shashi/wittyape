@@ -7,22 +7,11 @@
 
     <ImageView
         android:id="@+id/image_view_navigation_header"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/wittyapelogo"
         tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/text_view_name_navigation_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/roboto"
-        android:text="@string/app_name"
-        android:textColor="@color/orange_custom"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text_view_desc_navigation_header"
@@ -31,7 +20,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/montserrat_alternates"
         android:text="@string/helping_kids_excel"
-        android:textColor="@color/orange_custom"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="15sp"
         android:textStyle="italic" />
 
