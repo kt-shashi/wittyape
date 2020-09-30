@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout_main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_custom"
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
@@ -20,9 +21,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/design_toolber"
             app:title="@string/app_name"
-            app:titleTextColor="@color/white_custom" />
+            app:titleTextColor="@color/black_custom" />
 
         <FrameLayout
             android:id="@+id/frame_layout_main_activity"
@@ -32,16 +34,12 @@
 
     </LinearLayout>
 
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/naviagtion_drawer_main_activity"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header_layout_navigation_drawer"
-        app:menu="@menu/menu_items_navigation_drawer"
-
-        />
-
+        app:menu="@menu/menu_items_navigation_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

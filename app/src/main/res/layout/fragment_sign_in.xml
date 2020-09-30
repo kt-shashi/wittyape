@@ -11,7 +11,7 @@
         android:id="@+id/text_input_layout_email_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/orange_custom"
+        android:textColorHint="@color/colorPrimaryDark"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColorHint="@color/orange_custom"
+        android:textColorHint="@color/colorPrimaryDark"
         app:counterEnabled="true"
         app:counterMaxLength="8"
         app:errorEnabled="true"
@@ -56,6 +56,7 @@
         android:fontFamily="@font/roboto"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/sign_in" />
+        android:text="@string/sign_in"
+        android:textColor="@color/colorPrimary" />
 
 </LinearLayout>

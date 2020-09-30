@@ -20,9 +20,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="140dp"
+            android:layout_width="300dp"
             android:layout_height="140dp"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/wittyapelogo"
             tools:ignore="ContentDescription" />
 
@@ -30,24 +30,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="7dp"
-            android:fontFamily="@font/roboto"
-            android:gravity="center"
-            android:text="@string/wittyape"
-            android:textColor="@color/black_custom"
-            android:textSize="26sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5sp"
+            android:layout_marginBottom="10sp"
             android:fontFamily="@font/montserrat_alternates"
             android:gravity="center"
             android:text="@string/helping_kids_excel"
-            android:textColor="@color/dark_custom"
+            android:textColor="@color/grey_custom"
             android:textSize="15sp"
             android:textStyle="italic" />
 
@@ -83,7 +71,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/roboto"
             android:text="@string/sign_up"
-            android:textColor="@color/orange_custom"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
     </LinearLayout>
 
