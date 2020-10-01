@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "364860976148",
+    "firebase_url": "https://wittyape-android.firebaseio.com",
+    "project_id": "wittyape-android",
+    "storage_bucket": "wittyape-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364860976148:android:2af3b8a5bf6ae5311e8b01",
+        "android_client_info": {
+          "package_name": "com.wittyape.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364860976148-c9sqttm7olulkh92saqkhbjrfg8tm27u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wittyape.android",
+            "certificate_hash": "6d173210ae329f97482e4cfd03dd07616b8a1f68"
+          }
+        },
+        {
+          "client_id": "364860976148-dia7p9enbed18ih3lr3b8gu74npdsoi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIiWAlO_RUtsNy_dqS55sIZ4PK203qD8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364860976148-dia7p9enbed18ih3lr3b8gu74npdsoi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

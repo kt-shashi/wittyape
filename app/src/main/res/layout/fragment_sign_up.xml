@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
@@ -66,17 +67,69 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button_sign_up_fragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@drawable/design_button_login"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="@string/sign_up"
-        android:textColor="@color/colorPrimary" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="5dp"
+            android:drawableEnd="@drawable/icon_right"
+            android:gravity="start"
+            android:padding="5dp"
+            android:text="@string/choose_class"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <Spinner
+            android:id="@+id/spinner_class_selector_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@color/grey_custom"
+            android:entries="@array/class_selector"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:popupBackground="@color/grey_custom" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/button_sign_up_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/design_button_login"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorPrimary" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_sign_up"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
