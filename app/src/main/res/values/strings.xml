@@ -18,7 +18,7 @@
     <string name="help">Help &amp; feedback</string>
     <string name="exit">Exit</string>
     <string name="learn">Learn</string>
-    <string name="profile">Profile</string>
+    <string name="profile">Wittyape Profile</string>
     <string name="logout">Logout</string>
     <string name="home">Home</string>
     <string name="primary">Primary</string>
@@ -28,6 +28,9 @@
     <string name="welcome_user">Welcome, User</string>
     <string name="ready_to_learn">Ready to learn?</string>
     <string name="choose_class">Select your class</string>
+    <string name="update">Update</string>
+    <string name="log_out">Log out</string>
+    <string name="loading_display_name">Loading display name</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>
