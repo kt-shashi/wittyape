@@ -31,6 +31,7 @@
     <string name="update">Update</string>
     <string name="log_out">Log out</string>
     <string name="loading_display_name">Loading display name</string>
+    <string name="practice">Practice</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

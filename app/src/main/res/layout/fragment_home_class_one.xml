@@ -92,9 +92,11 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/image_button_counting_home_class_one"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
                         android:padding="20dp"
                         android:src="@drawable/icon_counting"
                         tools:ignore="ContentDescription" />
@@ -121,6 +123,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
                         android:padding="40dp"
                         android:src="@drawable/icon_addition"
                         tools:ignore="ContentDescription" />
@@ -147,6 +150,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
                         android:padding="40dp"
                         android:src="@drawable/icon_subtraction"
                         tools:ignore="ContentDescription" />

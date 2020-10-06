@@ -1,9 +1,11 @@
 package com.wittyape.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class HomeClassOneFragment extends Fragment {
+public class HomeClassOneFragment extends Fragment implements View.OnClickListener {
 
     public HomeClassOneFragment() {
 
@@ -27,6 +29,8 @@ public class HomeClassOneFragment extends Fragment {
 
     TextView textViewWelcome;
     ProgressBar progressBar;
+
+    ImageButton countingClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -43,6 +47,9 @@ public class HomeClassOneFragment extends Fragment {
         textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment);
         progressBar = view.findViewById(R.id.progress_bar_home_class_one);
         progressBar.setVisibility(View.GONE);
+
+        countingClicked = view.findViewById(R.id.image_button_counting_home_class_one);
+        countingClicked.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -104,6 +111,15 @@ public class HomeClassOneFragment extends Fragment {
     }
 
     @Override
+    public void onClick(View view) {
+
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+        intent.putExtra("userClass", "countingone");
+        startActivity(intent);
+
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
 
@@ -120,4 +136,5 @@ public class HomeClassOneFragment extends Fragment {
         }
 
     }
+
 }
