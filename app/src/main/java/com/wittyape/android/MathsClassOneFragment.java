@@ -1,5 +1,6 @@
 package com.wittyape.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,7 +52,9 @@ public class MathsClassOneFragment extends Fragment implements View.OnClickListe
     }
 
     private void countingClicked() {
-        Toast.makeText(getActivity(), "Counting", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+        intent.putExtra("userClass", "countingone");
+        startActivity(intent);
     }
 
     private void additionClicked() {

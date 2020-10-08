@@ -8,6 +8,7 @@
     <color name="dark_custom">#2F363F</color>
     <color name="white_custom">#FFFFFF</color>
     <color name="black_custom">#000000</color>
-    <color name="grey_custom">#dcdcdc</color>
-    <color name="red_custom">#D63031</color>
+    <color name="grey_custom">#f0f0f0</color>
+    <color name="colorRed">#D63031</color>
+    <color name="colorGreen">#2ecc72</color>
 </resources>

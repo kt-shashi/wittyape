@@ -24,8 +24,9 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/design_toolber"
+            android:elevation="10dp"
             app:title="@string/app_name"
-            app:titleTextColor="@color/black_custom" />
+            app:titleTextColor="@color/white_custom" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

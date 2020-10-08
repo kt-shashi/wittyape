@@ -32,6 +32,11 @@
     <string name="log_out">Log out</string>
     <string name="loading_display_name">Loading display name</string>
     <string name="practice">Practice</string>
+    <string name="score">Score</string>
+    <string name="practice_couting">Practice Couting</string>
+    <string name="timer">Timer</string>
+    <string name="question">Question?</string>
+    <string name="start">Start</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

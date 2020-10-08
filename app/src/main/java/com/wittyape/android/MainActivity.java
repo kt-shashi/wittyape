@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawerLayout,
                 toolbar,
                 R.string.open, R.string.close);
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorPrimary));
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 

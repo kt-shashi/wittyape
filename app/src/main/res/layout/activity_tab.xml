@@ -12,9 +12,9 @@
         android:id="@+id/tab_layout_tab_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        app:tabIndicatorColor="@color/colorPrimaryDark"
-        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
+        app:tabIndicatorColor="@color/white_custom"
+        app:tabSelectedTextColor="@color/white_custom"
         app:tabTextColor="@color/black_custom">
 
         <com.google.android.material.tabs.TabItem
