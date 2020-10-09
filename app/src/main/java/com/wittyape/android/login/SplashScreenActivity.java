@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
+
+import com.wittyape.android.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

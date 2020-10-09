@@ -112,11 +112,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/design_button_login"
+            android:elevation="5dp"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/sign_up"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ProgressBar
             android:id="@+id/progress_bar_sign_up"

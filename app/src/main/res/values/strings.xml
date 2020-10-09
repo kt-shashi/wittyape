@@ -41,6 +41,20 @@
     <string name="total_questions">Total Questions:</string>
     <string name="accuracy">Accuracy</string>
     <string name="performace">Performace</string>
+    <string name="practice_addition">Practice Addition</string>
+    <string name="practice_subtraction">Practice Subtraction</string>
+    <string name="addition_text_1">Addition is bringing two or more numbers (or things) together to make a new total</string>
+    <string name="addition_text_2">Here 2 balls are added to 1 ball to make 3 balls</string>
+    <string name="addition_text_3">In Numerals : 2 + 1 = 3</string>
+    <string name="addition_text_4">In Words : Two plus one equals three</string>
+    <string name="subtraction_text_1">Subtraction is taking one number away from another.</string>
+    <string name="subtraction_text_2">Say you had 3 balls</string>
+    <string name="subtraction_text_3">Your friend borrowed this red ball</string>
+    <string name="subtraction_text_4">Now you have green and blue ball</string>
+    <string name="subtraction_text_5">In Numerals : 3 – 1 = 2</string>
+    <string name="subtraction_text_6">In Words : Three minus one equals two</string>
+    <string name="equals_symbol">=</string>
+    <string name="add_symbol">+</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

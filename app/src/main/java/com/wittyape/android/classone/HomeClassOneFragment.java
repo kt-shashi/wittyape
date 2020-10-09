@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.classone;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.R;
+import com.wittyape.android.TabActivity;
 
 public class HomeClassOneFragment extends Fragment implements View.OnClickListener {
 
@@ -32,6 +34,8 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     ProgressBar progressBar;
 
     ImageButton countingClicked;
+    ImageButton additionClicked;
+    ImageButton subtractionClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -51,7 +55,11 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         progressBar.setVisibility(View.GONE);
 
         countingClicked = view.findViewById(R.id.image_button_counting_home_class_one);
+        additionClicked = view.findViewById(R.id.image_button_addition_home_class_one);
+        subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_one);
         countingClicked.setOnClickListener(this);
+        additionClicked.setOnClickListener(this);
+        subtractionClicked.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -121,8 +129,21 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View view) {
 
+
         Intent intent = new Intent(getActivity(), TabActivity.class);
-        intent.putExtra("userClass", "countingone");
+
+        switch (view.getId()) {
+            case R.id.image_button_counting_home_class_one:
+                intent.putExtra("userClass", "countingone");
+                break;
+            case R.id.image_button_addition_home_class_one:
+                intent.putExtra("userClass", "addone");
+                break;
+            case R.id.image_button_subtraction_home_class_one:
+                intent.putExtra("userClass", "subtractone");
+                break;
+        }
+
         startActivity(intent);
 
     }

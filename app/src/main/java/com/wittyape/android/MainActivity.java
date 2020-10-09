@@ -19,11 +19,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -36,6 +34,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.classone.HomeClassOneFragment;
+import com.wittyape.android.classone.MathsClassOneFragment;
+import com.wittyape.android.helpfeedback.HelpFeedbackFragment;
+import com.wittyape.android.login.LoginActivity;
 
 import java.util.HashMap;
 import java.util.Map;

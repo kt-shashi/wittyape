@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.wittyape.android.MainActivity;
+import com.wittyape.android.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 

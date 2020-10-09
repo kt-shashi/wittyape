@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +27,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.MainActivity;
+import com.wittyape.android.R;
 
 import java.util.HashMap;
 import java.util.Map;

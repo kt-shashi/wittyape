@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.classone;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.wittyape.android.R;
+import com.wittyape.android.TabActivity;
 
 public class MathsClassOneFragment extends Fragment implements View.OnClickListener {
 
@@ -58,10 +61,14 @@ public class MathsClassOneFragment extends Fragment implements View.OnClickListe
     }
 
     private void additionClicked() {
-        Toast.makeText(getActivity(), "Addition", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+        intent.putExtra("userClass", "addone");
+        startActivity(intent);
     }
 
     private void subTractionClicked() {
-        Toast.makeText(getActivity(), "Sub", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+        intent.putExtra("userClass", "subtractone");
+        startActivity(intent);
     }
 }

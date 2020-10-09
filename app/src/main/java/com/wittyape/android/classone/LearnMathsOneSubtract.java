@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.classone;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,18 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class LearnMathsTwoCount extends Fragment {
+import com.wittyape.android.R;
 
-    public LearnMathsTwoCount() {
+public class LearnMathsOneSubtract extends Fragment {
+
+    public LearnMathsOneSubtract() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.learnmathsonesubtract, container, false);
 
-        View view = inflater.inflate(R.layout.learnmathstwocount, container, false);
         return view;
-
     }
+
 }

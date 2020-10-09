@@ -146,6 +146,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/image_button_addition_home_class_one"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="start"
@@ -175,6 +176,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/image_button_subtraction_home_class_one"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="start"

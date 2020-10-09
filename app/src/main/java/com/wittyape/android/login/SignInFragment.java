@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.wittyape.android.MainActivity;
+import com.wittyape.android.R;
 
 public class SignInFragment extends Fragment implements View.OnClickListener {
 

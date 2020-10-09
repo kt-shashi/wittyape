@@ -1,5 +1,4 @@
-package com.wittyape.android;
-
+package com.wittyape.android.classone;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -24,15 +23,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class PracticeMathsOneCount extends Fragment implements View.OnClickListener {
+public class PracticeMathsOneAdd extends Fragment implements View.OnClickListener {
 
-    public PracticeMathsOneCount() {
+    public PracticeMathsOneAdd() {
 
     }
 
@@ -64,8 +64,7 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.practicemathsonecount, container, false);
+        View view = inflater.inflate(R.layout.practicemathsoneadd, container, false);
 
         initViews(view);
 
@@ -73,22 +72,21 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         firebaseFirestore = FirebaseFirestore.getInstance();
 
         return view;
-
     }
 
     private void initViews(View view) {
 
-        textViewTimer = view.findViewById(R.id.text_view_timer_couting_class_one);
-        textViewScore = view.findViewById(R.id.text_view_score_couting_class_one);
+        textViewTimer = view.findViewById(R.id.text_view_timer_add_class_one);
+        textViewScore = view.findViewById(R.id.text_view_score_add_class_one);
 
-        textViewQuestion = view.findViewById(R.id.text_view_question_counting_class_one);
+        textViewQuestion = view.findViewById(R.id.text_view_question_add_class_one);
 
-        buttonAnswer00 = view.findViewById(R.id.button_count_00_class_one);
-        buttonAnswer01 = view.findViewById(R.id.button_count_01_class_one);
-        buttonAnswer10 = view.findViewById(R.id.button_count_10_class_one);
-        buttonAnswer11 = view.findViewById(R.id.button_count_11_class_one);
+        buttonAnswer00 = view.findViewById(R.id.button_add_00_class_one);
+        buttonAnswer01 = view.findViewById(R.id.button_add_01_class_one);
+        buttonAnswer10 = view.findViewById(R.id.button_add_10_class_one);
+        buttonAnswer11 = view.findViewById(R.id.button_add_11_class_one);
 
-        buttonStartStop = view.findViewById(R.id.button_start_count_class_one);
+        buttonStartStop = view.findViewById(R.id.button_start_add_class_one);
 
         buttonAnswer00.setOnClickListener(this);
         buttonAnswer01.setOnClickListener(this);
@@ -104,7 +102,7 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.button_start_count_class_one) {
+        if (view.getId() == R.id.button_start_add_class_one) {
 
             preCountingTimer();
             setScore();
@@ -138,22 +136,22 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         answersList.clear();
         Random random = new Random();
 
-        int firstNumber = random.nextInt(30);
-        int secondNumber = firstNumber + 1;
+        int firstNumber = random.nextInt(6);
+        int secondNumber = random.nextInt(6);
 
-        String question = "What comes after " + Integer.toString(firstNumber) + " ?";
+        String question = "Adding : " + firstNumber + " + " + secondNumber + " =";
         textViewQuestion.setText(question);
 
         locationOfCorrectAnswer = random.nextInt(4);
 
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
-                answersList.add(secondNumber);
+                answersList.add(firstNumber + secondNumber);
             } else {
-                int wrongAnswer = random.nextInt(31);
+                int wrongAnswer = random.nextInt(11);
 
-                while (wrongAnswer == secondNumber)
-                    wrongAnswer = random.nextInt(31);
+                while (wrongAnswer == (firstNumber + secondNumber))
+                    wrongAnswer = random.nextInt(11);
 
                 answersList.add(wrongAnswer);
             }

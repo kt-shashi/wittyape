@@ -5,6 +5,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.wittyape.android.classone.LearnMathsOneAdd;
+import com.wittyape.android.classone.LearnMathsOneCount;
+import com.wittyape.android.classone.LearnMathsOneSubtract;
+import com.wittyape.android.classone.PracticeMathsOneAdd;
+import com.wittyape.android.classone.PracticeMathsOneCount;
+import com.wittyape.android.classone.PracticeMathsOneSubtract;
+import com.wittyape.android.classtwo.LearnMathsTwoCount;
+import com.wittyape.android.classtwo.PracticeMathsTwoCount;
+
 class CustomPageAdapter extends FragmentPagerAdapter {
 
     private String userClass;
@@ -28,6 +37,28 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return new LearnMathsOneCount();
                 case 1:
                     return new PracticeMathsOneCount();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("addone")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsOneAdd();
+                case 1:
+                    return new PracticeMathsOneAdd();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("subtractone")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsOneSubtract();
+                case 1:
+                    return new PracticeMathsOneSubtract();
                 default:
                     return null;
             }

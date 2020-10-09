@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.classone;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.wittyape.android.R;
 
 public class LearnMathsOneCount extends Fragment {
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,7 +22,7 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -32,32 +33,41 @@
         android:weightSum="2">
 
         <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="start"
+            android:background="@drawable/design_button_maths"
             android:padding="20dp"
             android:src="@drawable/icon_counting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/button_counting_class_one"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="end|center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:background="@drawable/design_button_answer_count"
+            android:elevation="5dp"
             android:gravity="center_horizontal|center_vertical"
             android:padding="10dp"
             android:text="@string/counting"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView1"
+            app:layout_constraintTop_toTopOf="@+id/imageView1" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -68,31 +78,40 @@
         android:weightSum="2">
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:background="@drawable/design_button_maths"
             android:padding="30dp"
             android:src="@drawable/icon_addition"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/button_addition_class_one"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:background="@drawable/design_button_answer_count"
+            android:elevation="5dp"
             android:gravity="center_horizontal|center_vertical"
             android:padding="10dp"
             android:text="@string/addition"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -103,28 +122,37 @@
         android:weightSum="2">
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:background="@drawable/design_button_maths"
             android:padding="30dp"
             android:src="@drawable/icon_subtraction"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
         <Button
             android:id="@+id/button_subtraction_class_one"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="1"
+            android:background="@drawable/design_button_answer_count"
+            android:elevation="5dp"
             android:gravity="center_horizontal|center_vertical"
             android:padding="10dp"
             android:text="@string/subtraction"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
