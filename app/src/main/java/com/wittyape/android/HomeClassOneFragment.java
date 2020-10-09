@@ -28,6 +28,7 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     }
 
     TextView textViewWelcome;
+    TextView textViewScore;
     ProgressBar progressBar;
 
     ImageButton countingClicked;
@@ -45,6 +46,7 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         View view = inflater.inflate(R.layout.fragment_home_class_one, container, false);
 
         textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment);
+        textViewScore = view.findViewById(R.id.text_view_score_home_fragment);
         progressBar = view.findViewById(R.id.progress_bar_home_class_one);
         progressBar.setVisibility(View.GONE);
 
@@ -83,14 +85,20 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
                             if (documentSnapshot.exists()) {
 
                                 String userName = documentSnapshot.getString("name");
+                                String userScore = documentSnapshot.getString("score").toString();
 
                                 if (userName.isEmpty()) {
                                     userName = "";
                                 }
+                                if (userScore.isEmpty()) {
+                                    userScore = "";
+                                }
 
                                 userName = "Welcome, " + userName;
+                                userScore = "Score: " + userScore;
 
                                 textViewWelcome.setText(userName);
+                                textViewScore.setText(userScore);
                                 progressBar.setVisibility(View.GONE);
 
                             } else {

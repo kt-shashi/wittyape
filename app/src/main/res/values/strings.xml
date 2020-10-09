@@ -25,7 +25,6 @@
     <string name="counting">Counting</string>
     <string name="addition">Addition</string>
     <string name="subtraction">Subtraction</string>
-    <string name="welcome_user">Welcome, User</string>
     <string name="ready_to_learn">Ready to learn?</string>
     <string name="choose_class">Select your class</string>
     <string name="update">Update</string>
@@ -37,6 +36,11 @@
     <string name="timer">Timer</string>
     <string name="question">Question?</string>
     <string name="start">Start</string>
+    <string name="welcome">Welcome</string>
+    <string name="correct_answer">Correct Answer:</string>
+    <string name="total_questions">Total Questions:</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="performace">Performace</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

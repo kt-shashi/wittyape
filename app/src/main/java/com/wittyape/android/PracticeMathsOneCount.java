@@ -11,12 +11,23 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class PracticeMathsOneCount extends Fragment implements View.OnClickListener {
@@ -43,6 +54,13 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
 
     private Button buttonStartStop;
 
+    private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firebaseFirestore;
+
+    public static final String COLLECTION_NAME = "users";
+
+    CountDownTimer countDownTimer;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,6 +68,9 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         View view = inflater.inflate(R.layout.practicemathsonecount, container, false);
 
         initViews(view);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
         return view;
 
@@ -74,6 +95,8 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         buttonAnswer10.setOnClickListener(this);
         buttonAnswer11.setOnClickListener(this);
         buttonStartStop.setOnClickListener(this);
+
+        enableButton(false);
 
         answersList = new ArrayList<>();
     }
@@ -148,10 +171,7 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         textViewTimer.setText("Timer");
         textViewQuestion.setText("Score");
 
-        buttonAnswer00.setEnabled(true);
-        buttonAnswer01.setEnabled(true);
-        buttonAnswer10.setEnabled(true);
-        buttonAnswer11.setEnabled(true);
+        enableButton(true);
 
         buttonStartStop.setVisibility(View.GONE);
 
@@ -162,7 +182,7 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
 
     private void startCountDown() {
 
-        new CountDownTimer(10100, 1000) {
+        countDownTimer = new CountDownTimer(10100, 1000) {
 
             @Override
             public void onTick(long l) {
@@ -195,20 +215,100 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         buttonAnswer10.setText("-");
         buttonAnswer11.setText("-");
 
-        buttonAnswer00.setEnabled(false);
-        buttonAnswer01.setEnabled(false);
-        buttonAnswer10.setEnabled(false);
-        buttonAnswer11.setEnabled(false);
+        enableButton(false);
 
         buttonStartStop.setVisibility(View.VISIBLE);
         buttonStartStop.setText("Retry");
+
+        showResult(correctScore, totalQuestions);
+        updateScoreInFirestore(correctScore);
 
         correctScore = 0;
         totalQuestions = 0;
     }
 
+    private void enableButton(boolean isEnable) {
+        buttonAnswer00.setEnabled(isEnable);
+        buttonAnswer01.setEnabled(isEnable);
+        buttonAnswer10.setEnabled(isEnable);
+        buttonAnswer11.setEnabled(isEnable);
+    }
+
     private void setScore() {
         textViewScore.setText(String.valueOf(correctScore) + "/" + String.valueOf(totalQuestions));
+    }
+
+    private void showResult(int finalScore, int finalQuestions) {
+
+        LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+        View layoutView = layoutInflater.inflate(R.layout.dialog_result, null);
+
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity()).setView(layoutView);
+        alertDialog.setCancelable(true);
+        final AlertDialog testDialog = alertDialog.create();
+        testDialog.show();
+
+        TextView textViewFinalScore = layoutView.findViewById(R.id.text_view_correct_ans_dialog);
+        TextView textViewTotalQuestions = layoutView.findViewById(R.id.text_view_total_question_dialog);
+        TextView textViewAccuracy = layoutView.findViewById(R.id.text_view_accuracy_dialog);
+
+        textViewFinalScore.setText("Correct Answers : " + finalScore);
+        textViewTotalQuestions.setText("Questions attempted : " + finalQuestions);
+
+        if (finalScore == 0 || finalQuestions == 0) {
+            textViewAccuracy.setText("Accuracy: 0%");
+        } else {
+            textViewAccuracy.setText("Accuracy: " + Integer.toString((finalScore * 100) / finalQuestions) + "%");
+        }
+    }
+
+    private void updateScoreInFirestore(final int finalScore) {
+
+        final CollectionReference collectionReference = firebaseFirestore.collection(COLLECTION_NAME);
+
+        collectionReference
+                .document(firebaseAuth.getCurrentUser().getUid())
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                        //Check if the document exists
+                        if (documentSnapshot.exists()) {
+
+                            String userScore = documentSnapshot.getString("score");
+
+                            if (userScore.isEmpty()) {
+                                userScore = "0";
+                            }
+
+                            int updatedScore = finalScore + Integer.parseInt(userScore);
+
+                            Map<String, Object> data = new HashMap<>();
+                            data.put("score", String.valueOf(updatedScore));
+
+                            collectionReference
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .update(data)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+
+                                            Toast.makeText(getActivity(), "Score updated", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    });
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
     }
 
     private void answerClickAnimation(final View view, final boolean isCorrect) {
@@ -236,4 +336,11 @@ public class PracticeMathsOneCount extends Fragment implements View.OnClickListe
         });
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        if (countDownTimer != null)
+            countDownTimer.cancel();
+    }
 }
