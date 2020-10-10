@@ -112,6 +112,7 @@ public class SignUpFragment extends Fragment implements View.OnClickListener, Ad
                             Map<String, Object> userData = new HashMap<>();
                             userData.put("name", userName);
                             userData.put("class", userClass);
+                            userData.put("score", "0");
 
                             documentReference.set(userData)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {

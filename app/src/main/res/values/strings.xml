@@ -55,6 +55,8 @@
     <string name="subtraction_text_6">In Words : Three minus one equals two</string>
     <string name="equals_symbol">=</string>
     <string name="add_symbol">+</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="loading">loading</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.LeaderboardModel;
 import com.wittyape.android.R;
 
 import java.util.ArrayList;
@@ -266,6 +267,7 @@ public class PracticeMathsOneSubtract extends Fragment implements View.OnClickLi
     private void updateScoreInFirestore(final int finalScore) {
 
         final CollectionReference collectionReference = firebaseFirestore.collection(COLLECTION_NAME);
+        final CollectionReference collectionReferenceScore = firebaseFirestore.collection("scoreclass1");
 
         collectionReference
                 .document(firebaseAuth.getCurrentUser().getUid())
@@ -278,6 +280,7 @@ public class PracticeMathsOneSubtract extends Fragment implements View.OnClickLi
                         if (documentSnapshot.exists()) {
 
                             String userScore = documentSnapshot.getString("score");
+                            final String userName = documentSnapshot.getString("name");
 
                             if (userScore.isEmpty()) {
                                 userScore = "0";
@@ -290,15 +293,13 @@ public class PracticeMathsOneSubtract extends Fragment implements View.OnClickLi
 
                             collectionReference
                                     .document(firebaseAuth.getCurrentUser().getUid())
-                                    .update(data)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
+                                    .update(data);
 
-                                            Toast.makeText(getActivity(), "Score updated", Toast.LENGTH_SHORT).show();
+                            LeaderboardModel leaderboardModel = new LeaderboardModel(userName, String.valueOf(updatedScore));
 
-                                        }
-                                    });
+                            collectionReferenceScore
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .set(leaderboardModel);
 
                         }
                     }

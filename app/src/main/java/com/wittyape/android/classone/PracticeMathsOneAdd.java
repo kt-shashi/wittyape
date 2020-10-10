@@ -21,8 +21,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.LeaderboardModel;
+import com.wittyape.android.MainActivity;
 import com.wittyape.android.R;
 
 import java.util.ArrayList;
@@ -263,6 +266,7 @@ public class PracticeMathsOneAdd extends Fragment implements View.OnClickListene
     private void updateScoreInFirestore(final int finalScore) {
 
         final CollectionReference collectionReference = firebaseFirestore.collection(COLLECTION_NAME);
+        final CollectionReference collectionReferenceScore = firebaseFirestore.collection("scoreclass1");
 
         collectionReference
                 .document(firebaseAuth.getCurrentUser().getUid())
@@ -275,27 +279,26 @@ public class PracticeMathsOneAdd extends Fragment implements View.OnClickListene
                         if (documentSnapshot.exists()) {
 
                             String userScore = documentSnapshot.getString("score");
+                            final String userName = documentSnapshot.getString("name");
 
                             if (userScore.isEmpty()) {
                                 userScore = "0";
                             }
 
-                            int updatedScore = finalScore + Integer.parseInt(userScore);
+                            final int updatedScore = finalScore + Integer.parseInt(userScore);
 
                             Map<String, Object> data = new HashMap<>();
                             data.put("score", String.valueOf(updatedScore));
 
                             collectionReference
                                     .document(firebaseAuth.getCurrentUser().getUid())
-                                    .update(data)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
+                                    .update(data);
 
-                                            Toast.makeText(getActivity(), "Score updated", Toast.LENGTH_SHORT).show();
+                            LeaderboardModel leaderboardModel = new LeaderboardModel(userName, String.valueOf(updatedScore));
 
-                                        }
-                                    });
+                            collectionReferenceScore
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .set(leaderboardModel);
 
                         }
                     }
