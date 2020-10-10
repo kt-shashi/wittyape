@@ -57,6 +57,7 @@
     <string name="add_symbol">+</string>
     <string name="leaderboard">Leaderboard</string>
     <string name="loading">loading</string>
+    <string name="top_scorer">Top Scorer</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

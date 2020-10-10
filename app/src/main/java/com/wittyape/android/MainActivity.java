@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 progressBar.setVisibility(View.GONE);
 
                                 if (userClass.equals("Class1")) {
-                                    //Set Home Fragment by default
+                                    //Set Home LeaderboardFragmentOne by default
                                     getSupportFragmentManager()
                                             .beginTransaction()
                                             .replace(R.id.frame_layout_main_activity, new HomeClassOneFragment())
@@ -175,6 +175,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 case R.id.menu_item_maths:
                     fragment = new MathsClassOneFragment();
+                    break;
+
+                case R.id.menu_item_leaderboard:
+                    fragment = new LeaderboardFragmentOne();
                     break;
 
                 case R.id.menu_item_help:

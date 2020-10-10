@@ -36,6 +36,21 @@
     </item>
 
     <item
+        android:id="@+id/submenu_leaderboard"
+        android:title="@string/leaderboard">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_item_leaderboard"
+                android:icon="@drawable/icon_leaderboard"
+                android:title="@string/leaderboard" />
+
+        </menu>
+
+    </item>
+
+    <item
         android:id="@+id/submenu_others"
         android:title="@string/others">
 
@@ -54,6 +69,5 @@
         </menu>
 
     </item>
-
 
 </menu>

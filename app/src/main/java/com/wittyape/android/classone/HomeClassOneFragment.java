@@ -48,12 +48,6 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseFirestore firebaseFirestore;
 
-    private ProgressBar progressBarLeaderboard;
-    private ArrayList<LeaderboardModel> leaderArrayList;
-
-    private TextView textViewNameL;
-    private TextView textViewScoreL;
-
     public static final String COLLECTION_NAME = "users";
 
     @Nullable
@@ -89,11 +83,6 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
-
-        textViewNameL = view.findViewById(R.id.text_view_name_leader);
-        textViewScoreL = view.findViewById(R.id.text_view_score_leader);
-        progressBarLeaderboard = view.findViewById(R.id.progress_bar_leaderboard_class_one);
-        leaderArrayList = new ArrayList<>();
     }
 
     private void setUserName() {
@@ -131,8 +120,6 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
                                 textViewScore.setText(userScore);
                                 progressBar.setVisibility(View.GONE);
 
-                                setLeaderBoard();
-
                             } else {
                                 progressBar.setVisibility(View.GONE);
                                 Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
@@ -169,58 +156,6 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
 
         startActivity(intent);
 
-    }
-
-    private void setLeaderBoard() {
-        Log.d("debug_shashi", "leaderboared in");
-        initLeaderData();
-
-        progressBarLeaderboard.setVisibility(View.GONE);
-    }
-
-    private void initLeaderData() {
-
-        firebaseFirestore.collection("scoreclass1")
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-
-                        leaderArrayList.clear();
-
-                        for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots) {
-                            LeaderboardModel leader = snapshot.toObject(LeaderboardModel.class);
-                            leaderArrayList.add(leader);
-
-                            Log.d("debug_shashi", leader.getName());
-                            Log.d("debug_shashi", leader.getScore());
-                        }
-
-                        Collections.sort(leaderArrayList);
-
-                        if (leaderArrayList.size() > 5)
-                            leaderArrayList.subList(5, leaderArrayList.size()).clear();
-
-                        Log.d("debug_shashi", String.valueOf(leaderArrayList.size()));
-
-                        textViewNameL.setText("");
-                        textViewScoreL.setText("");
-
-                        for (int i = 0; i < leaderArrayList.size(); i++) {
-                            LeaderboardModel leader = leaderArrayList.get(i);
-                            textViewNameL.append(leader.getName() + "\n");
-                            textViewScoreL.append(leader.getScore() + "\n");
-                        }
-
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Failed to load", Toast.LENGTH_SHORT).show();
-                        progressBarLeaderboard.setVisibility(View.GONE);
-                    }
-                });
     }
 
     @Override

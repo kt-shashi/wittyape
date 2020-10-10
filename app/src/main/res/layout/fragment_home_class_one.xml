@@ -68,7 +68,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,8 +83,7 @@
             android:padding="4dp"
             android:text="@string/ready_to_learn"
             android:textColor="@color/black_custom"
-            android:textSize="17sp"
-            android:textStyle="italic" />
+            android:textSize="17sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -202,106 +200,6 @@
             </LinearLayout>
 
         </HorizontalScrollView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/design_button_answer_count"
-            android:elevation="5dp"
-            android:fontFamily="@font/roboto"
-            android:gravity="center"
-            android:padding="4dp"
-            android:text="@string/leaderboard"
-            android:textColor="@color/black_custom"
-            android:textSize="17sp"
-            android:textStyle="italic" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat"
-                android:gravity="start"
-                android:text="@string/display_name"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat"
-                android:gravity="end"
-                android:text="@string/score"
-                android:textColor="@color/black_custom"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp">
-
-            <TextView
-                android:id="@+id/text_view_name_leader"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
-                android:gravity="start"
-                android:padding="10dp"
-                android:text="@string/loading"
-                android:textColor="@color/black_custom"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/text_view_score_leader"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/text_view_score_leader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat"
-                android:gravity="end"
-                android:padding="10dp"
-                android:text="@string/loading"
-                android:textColor="@color/black_custom"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ProgressBar
-                android:id="@+id/progress_bar_leaderboard_class_one"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:translationZ="2dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

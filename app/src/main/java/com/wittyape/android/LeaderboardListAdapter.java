@@ -40,8 +40,8 @@ public class LeaderboardListAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View rootView = inflater.inflate(R.layout.list_item_leaderboard, null);
 
-        TextView nameTextView = rootView.findViewById(R.id.item_name);
-        TextView scoreTextView = rootView.findViewById(R.id.item_score);
+        TextView nameTextView = rootView.findViewById(R.id.item_name_leaderboard);
+        TextView scoreTextView = rootView.findViewById(R.id.item_score_leaderboard);
 
         LeaderboardModel data = (LeaderboardModel) getItem(i);
 
