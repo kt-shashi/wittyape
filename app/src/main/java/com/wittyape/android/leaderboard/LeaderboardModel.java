@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.leaderboard;
 
 public class LeaderboardModel implements Comparable<LeaderboardModel> {
 

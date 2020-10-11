@@ -37,14 +37,19 @@
 
     <item
         android:id="@+id/submenu_leaderboard"
-        android:title="@string/leaderboard">
+        android:title="@string/score">
 
         <menu>
 
             <item
                 android:id="@+id/menu_item_leaderboard"
-                android:icon="@drawable/icon_leaderboard"
+                android:icon="@drawable/icon_menu_leaderboard"
                 android:title="@string/leaderboard" />
+
+            <item
+                android:id="@+id/menu_item_scoring_system"
+                android:icon="@drawable/icon_menu_scoring_system"
+                android:title="@string/scoring_system" />
 
         </menu>
 

@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.wittyape.android.LeaderboardModel;
+import com.wittyape.android.leaderboard.LeaderboardModel;
 import com.wittyape.android.R;
 
 import java.util.ArrayList;

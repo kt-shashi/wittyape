@@ -58,6 +58,10 @@
     <string name="leaderboard">Leaderboard</string>
     <string name="loading">loading</string>
     <string name="top_scorer">Top Scorer</string>
+    <string name="scoring_system">Scoring system</string>
+    <string name="scoring_system_1">How to Score Points/Scoring System:</string>
+    <string name="scoring_system_2">Each Right answer wins you one point.\n\nYou get 30 seconds to earn maximum points with right answers.\n\nScores of Top 10 students will be published on leaderboard.</string>
+    <string name="multiplication">Multiplication</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

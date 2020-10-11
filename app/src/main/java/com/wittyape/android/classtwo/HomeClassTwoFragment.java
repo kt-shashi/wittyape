@@ -1,4 +1,4 @@
-package com.wittyape.android.classone;
+package com.wittyape.android.classtwo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,9 +23,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.wittyape.android.R;
 import com.wittyape.android.TabActivity;
 
-public class HomeClassOneFragment extends Fragment implements View.OnClickListener {
+public class HomeClassTwoFragment extends Fragment implements View.OnClickListener {
 
-    public HomeClassOneFragment() {
+    public HomeClassTwoFragment() {
 
     }
 
@@ -46,8 +46,7 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_home_class_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_class_two, container, false);
 
         initViews(view);
 
@@ -61,18 +60,17 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         };
 
         return view;
-
     }
 
     private void initViews(View view) {
-        textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment);
-        textViewScore = view.findViewById(R.id.text_view_score_home_fragment);
-        progressBar = view.findViewById(R.id.progress_bar_home_class_one);
+        textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment_two);
+        textViewScore = view.findViewById(R.id.text_view_score_home_fragment_two);
+        progressBar = view.findViewById(R.id.progress_bar_home_class_two);
         progressBar.setVisibility(View.GONE);
 
-        countingClicked = view.findViewById(R.id.image_button_counting_home_class_one);
-        additionClicked = view.findViewById(R.id.image_button_addition_home_class_one);
-        subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_one);
+        countingClicked = view.findViewById(R.id.image_button_counting_home_class_two);
+        additionClicked = view.findViewById(R.id.image_button_addition_home_class_two);
+        subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_two);
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
@@ -133,21 +131,21 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(getActivity(), TabActivity.class);
-
-        switch (view.getId()) {
-            case R.id.image_button_counting_home_class_one:
-                intent.putExtra("userClass", "countingone");
-                break;
-            case R.id.image_button_addition_home_class_one:
-                intent.putExtra("userClass", "addone");
-                break;
-            case R.id.image_button_subtraction_home_class_one:
-                intent.putExtra("userClass", "subtractone");
-                break;
-        }
-
-        startActivity(intent);
+//        Intent intent = new Intent(getActivity(), TabActivity.class);
+//
+//        switch (view.getId()) {
+//            case R.id.image_button_counting_home_class_one:
+//                intent.putExtra("userClass", "countingtwo");
+//                break;
+//            case R.id.image_button_addition_home_class_one:
+//                intent.putExtra("userClass", "addtwo");
+//                break;
+//            case R.id.image_button_subtraction_home_class_one:
+//                intent.putExtra("userClass", "subtracttwo");
+//                break;
+//        }
+//
+//        startActivity(intent);
 
     }
 
@@ -168,5 +166,4 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         }
 
     }
-
 }

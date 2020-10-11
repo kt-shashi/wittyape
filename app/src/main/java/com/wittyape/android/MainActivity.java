@@ -36,7 +36,12 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.wittyape.android.classone.HomeClassOneFragment;
 import com.wittyape.android.classone.MathsClassOneFragment;
+import com.wittyape.android.classtwo.HomeClassTwoFragment;
+import com.wittyape.android.classtwo.MathsClassTwoFragment;
 import com.wittyape.android.helpfeedback.HelpFeedbackFragment;
+import com.wittyape.android.helpfeedback.ScoringSystem;
+import com.wittyape.android.leaderboard.LeaderboardFragmentOne;
+import com.wittyape.android.leaderboard.LeaderboardFragmentTwo;
 import com.wittyape.android.login.LoginActivity;
 
 import java.util.HashMap;
@@ -170,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 case R.id.menu_item_home:
                     fragment = new HomeClassOneFragment();
-                    Log.d(TAG, "onNavigationItemSelected: home");
                     break;
 
                 case R.id.menu_item_maths:
@@ -181,6 +185,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new LeaderboardFragmentOne();
                     break;
 
+                case R.id.menu_item_scoring_system:
+                    fragment = new ScoringSystem();
+                    break;
+
                 case R.id.menu_item_help:
                     fragment = new HelpFeedbackFragment();
                     break;
@@ -188,10 +196,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.menu_item_exit:
                     finish();
 
-                default:
-                    Log.d(TAG, "onNavigationItemSelected: default home");
-                    fragment = new HomeClassOneFragment();
             }
+
+        } else if (userClass.equals("Class2")) {
+
+            switch (item.getItemId()) {
+
+                case R.id.menu_item_home:
+                    fragment = new HomeClassTwoFragment();
+                    break;
+
+                case R.id.menu_item_maths:
+                    fragment = new MathsClassTwoFragment();
+                    break;
+
+                case R.id.menu_item_leaderboard:
+                    fragment = new LeaderboardFragmentTwo();
+                    break;
+
+                case R.id.menu_item_scoring_system:
+                    fragment = new ScoringSystem();
+                    break;
+
+                case R.id.menu_item_help:
+                    fragment = new HelpFeedbackFragment();
+                    break;
+
+                case R.id.menu_item_exit:
+                    finish();
+
+            }
+
         }
 
         if (fragment == null) {

@@ -1,7 +1,6 @@
-package com.wittyape.android;
+package com.wittyape.android.leaderboard;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +18,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.wittyape.android.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -74,8 +74,8 @@ public class LeaderboardFragmentOne extends Fragment {
 
                         Collections.sort(leaderboardArrayList);
 
-                        if (leaderboardArrayList.size() > 5)
-                            leaderboardArrayList.subList(5, leaderboardArrayList.size()).clear();
+                        if (leaderboardArrayList.size() > 10)
+                            leaderboardArrayList.subList(10, leaderboardArrayList.size()).clear();
 
                         progressBar.setVisibility(View.GONE);
 

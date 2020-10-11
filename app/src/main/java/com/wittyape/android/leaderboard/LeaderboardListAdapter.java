@@ -1,4 +1,4 @@
-package com.wittyape.android;
+package com.wittyape.android.leaderboard;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.wittyape.android.R;
 
 import java.util.ArrayList;
 
@@ -45,7 +47,7 @@ public class LeaderboardListAdapter extends BaseAdapter {
 
         LeaderboardModel data = (LeaderboardModel) getItem(i);
 
-        nameTextView.setText(data.getName());
+        nameTextView.setText(Integer.toString(i + 1) + ".  " + data.getName());
         scoreTextView.setText(data.getScore());
 
         return rootView;
