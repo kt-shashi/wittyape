@@ -1,4 +1,4 @@
-package com.wittyape.android.leaderboard;
+package com.wittyape.android.classtwo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,16 +11,16 @@ import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
 
-public class LeaderboardFragmentTwo extends Fragment {
+public class LearnMathsTwoSubtract extends Fragment {
 
-    public LeaderboardFragmentTwo() {
+    public LearnMathsTwoSubtract() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_leaderboard_classtwo, container, false);
+        View view = inflater.inflate(R.layout.learnmathstwosubtract, container, false);
         return view;
     }
 

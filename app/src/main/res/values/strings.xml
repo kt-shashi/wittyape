@@ -62,6 +62,12 @@
     <string name="scoring_system_1">How to Score Points/Scoring System:</string>
     <string name="scoring_system_2">Each Right answer wins you one point.\n\nYou get 30 seconds to earn maximum points with right answers.\n\nScores of Top 10 students will be published on leaderboard.</string>
     <string name="multiplication">Multiplication</string>
+    <string name="multiplication_text_1">Multiplication is one of the four elementary mathematical operations of arithmetic, with the other ones being addition, subtraction and division.\nThe basic idea of multiplication is repeated addition.</string>
+    <string name="multiplication_text_2">Example: 3 × 2 = 3 + 3 = 6</string>
+    <string name="multiplication_text_3">In Numerals : 3 × 2 = 6</string>
+    <string name="multiplication_text_4">In Words : Three times two equals six</string>
+    <string name="multiplication_times_two">x 2</string>
+    <string name="or">Or</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

@@ -23,9 +23,9 @@ import com.wittyape.android.R;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LeaderboardFragmentOne extends Fragment {
+public class LeaderboardFragment extends Fragment {
 
-    public LeaderboardFragmentOne() {
+    public LeaderboardFragment() {
 
     }
 
@@ -38,14 +38,21 @@ public class LeaderboardFragmentOne extends Fragment {
     private FirebaseFirestore firebaseFirestore;
     private CollectionReference collectionReference;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        String className = getArguments().getString("class");
+
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        collectionReference = firebaseFirestore.collection(className);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_leaderboard_classone, container, false);
-
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        collectionReference = firebaseFirestore.collection("scoreclass1");
+        View view = inflater.inflate(R.layout.fragment_leaderboard, container, false);
 
         progressBar = view.findViewById(R.id.progress_bar_leaderboard_class_one_menu);
         progressBar.setVisibility(View.VISIBLE);

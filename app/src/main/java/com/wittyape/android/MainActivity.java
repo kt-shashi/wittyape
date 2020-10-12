@@ -40,8 +40,7 @@ import com.wittyape.android.classtwo.HomeClassTwoFragment;
 import com.wittyape.android.classtwo.MathsClassTwoFragment;
 import com.wittyape.android.helpfeedback.HelpFeedbackFragment;
 import com.wittyape.android.helpfeedback.ScoringSystem;
-import com.wittyape.android.leaderboard.LeaderboardFragmentOne;
-import com.wittyape.android.leaderboard.LeaderboardFragmentTwo;
+import com.wittyape.android.leaderboard.LeaderboardFragment;
 import com.wittyape.android.login.LoginActivity;
 
 import java.util.HashMap;
@@ -130,10 +129,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 progressBar.setVisibility(View.GONE);
 
                                 if (userClass.equals("Class1")) {
-                                    //Set Home LeaderboardFragmentOne by default
+                                    //Set Home LeaderboardFragment by default
                                     getSupportFragmentManager()
                                             .beginTransaction()
                                             .replace(R.id.frame_layout_main_activity, new HomeClassOneFragment())
+                                            .commit();
+                                } else if (userClass.equals("Class2")) {
+                                    //Set Home LeaderboardFragment by default
+                                    getSupportFragmentManager()
+                                            .beginTransaction()
+                                            .replace(R.id.frame_layout_main_activity, new HomeClassTwoFragment())
                                             .commit();
                                 }
 
@@ -182,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     break;
 
                 case R.id.menu_item_leaderboard:
-                    fragment = new LeaderboardFragmentOne();
+                    fragment = setLeaderBoardFragment();
                     break;
 
                 case R.id.menu_item_scoring_system:
@@ -211,7 +216,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     break;
 
                 case R.id.menu_item_leaderboard:
-                    fragment = new LeaderboardFragmentTwo();
+                    fragment = setLeaderBoardFragment();
                     break;
 
                 case R.id.menu_item_scoring_system:
@@ -244,6 +249,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    private Fragment setLeaderBoardFragment() {
+        LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+        Bundle arguments = new Bundle();
+
+        if (userClass.equals("Class1")) {
+            arguments.putString("class", "scoreclass1");
+        } else if (userClass.equals("Class2")) {
+            arguments.putString("class", "scoreclass2");
+        }
+
+        leaderboardFragment.setArguments(arguments);
+
+        return leaderboardFragment;
     }
 
     @Override
