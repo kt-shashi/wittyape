@@ -41,34 +41,22 @@ public class MathsClassOneFragment extends Fragment implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+
         switch (view.getId()) {
             case R.id.button_counting_class_one:
-                countingClicked();
+                intent.putExtra("userClass", "countingone");
                 break;
             case R.id.button_addition_class_one:
-                additionClicked();
+                intent.putExtra("userClass", "addone");
                 break;
             case R.id.button_subtraction_class_one:
-                subTractionClicked();
+                intent.putExtra("userClass", "subtractone");
                 break;
         }
-    }
 
-    private void countingClicked() {
-        Intent intent = new Intent(getActivity(), TabActivity.class);
-        intent.putExtra("userClass", "countingone");
         startActivity(intent);
     }
 
-    private void additionClicked() {
-        Intent intent = new Intent(getActivity(), TabActivity.class);
-        intent.putExtra("userClass", "addone");
-        startActivity(intent);
-    }
-
-    private void subTractionClicked() {
-        Intent intent = new Intent(getActivity(), TabActivity.class);
-        intent.putExtra("userClass", "subtractone");
-        startActivity(intent);
-    }
 }

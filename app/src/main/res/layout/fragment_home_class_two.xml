@@ -29,7 +29,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/text_view_score_home_fragment"
+                app:layout_constraintEnd_toStartOf="@+id/text_view_score_home_fragment_two"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -203,6 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
@@ -223,6 +224,35 @@
                         android:fontFamily="@font/roboto"
                         android:gravity="center_horizontal"
                         android:text="@string/multiplication"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_roman_home_class_two"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:padding="40dp"
+                        android:src="@drawable/icon_roman"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/roman_numeral"
                         android:textColor="@color/black_custom"
                         android:textSize="17sp" />
 

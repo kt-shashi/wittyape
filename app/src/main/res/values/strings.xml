@@ -43,6 +43,7 @@
     <string name="performace">Performace</string>
     <string name="practice_addition">Practice Addition</string>
     <string name="practice_subtraction">Practice Subtraction</string>
+    <string name="practice_multiplication">Practice Multiplication</string>
     <string name="addition_text_1">Addition is bringing two or more numbers (or things) together to make a new total</string>
     <string name="addition_text_2">Here 2 balls are added to 1 ball to make 3 balls</string>
     <string name="addition_text_3">In Numerals : 2 + 1 = 3</string>
@@ -68,6 +69,8 @@
     <string name="multiplication_text_4">In Words : Three times two equals six</string>
     <string name="multiplication_times_two">x 2</string>
     <string name="or">Or</string>
+    <string name="practice_roman_numerals">Practice Roman Numerals</string>
+    <string name="roman_numeral">Roman Numeral</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

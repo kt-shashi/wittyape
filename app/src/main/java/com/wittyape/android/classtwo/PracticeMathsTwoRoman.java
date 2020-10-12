@@ -24,6 +24,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.wittyape.android.R;
+import com.wittyape.android.helperclasses.RomanNumber;
 import com.wittyape.android.leaderboard.LeaderboardModel;
 
 import java.util.ArrayList;
@@ -31,9 +32,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class PracticeMathsTwoCount extends Fragment implements View.OnClickListener {
+public class PracticeMathsTwoRoman extends Fragment implements View.OnClickListener {
 
-    public PracticeMathsTwoCount() {
+    public PracticeMathsTwoRoman() {
 
     }
 
@@ -66,7 +67,7 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.practicemathstwocount, container, false);
+        View view = inflater.inflate(R.layout.practicemathstworoman, container, false);
 
         initViews(view);
 
@@ -79,17 +80,17 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
 
     private void initViews(View view) {
 
-        textViewTimer = view.findViewById(R.id.text_view_timer_couting_class_two);
-        textViewScore = view.findViewById(R.id.text_view_score_couting_class_two);
+        textViewTimer = view.findViewById(R.id.text_view_timer_roman_class_two);
+        textViewScore = view.findViewById(R.id.text_view_score_roman_class_two);
 
-        textViewQuestion = view.findViewById(R.id.text_view_question_counting_class_two);
+        textViewQuestion = view.findViewById(R.id.text_view_question_roman_class_two);
 
-        buttonAnswer00 = view.findViewById(R.id.button_count_00_class_two);
-        buttonAnswer01 = view.findViewById(R.id.button_count_01_class_two);
-        buttonAnswer10 = view.findViewById(R.id.button_count_10_class_two);
-        buttonAnswer11 = view.findViewById(R.id.button_count_11_class_two);
+        buttonAnswer00 = view.findViewById(R.id.button_roman_00_class_two);
+        buttonAnswer01 = view.findViewById(R.id.button_roman_01_class_two);
+        buttonAnswer10 = view.findViewById(R.id.button_roman_10_class_two);
+        buttonAnswer11 = view.findViewById(R.id.button_roman_11_class_two);
 
-        buttonStartStop = view.findViewById(R.id.button_start_count_class_two);
+        buttonStartStop = view.findViewById(R.id.button_start_roman_class_two);
 
         buttonAnswer00.setOnClickListener(this);
         buttonAnswer01.setOnClickListener(this);
@@ -105,7 +106,7 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.button_start_count_class_two) {
+        if (view.getId() == R.id.button_start_roman_class_two) {
 
             preCountingTimer();
             setScore();
@@ -139,22 +140,21 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
         answersList.clear();
         Random random = new Random();
 
-        int firstNumber = random.nextInt(101);
-        int secondNumber = firstNumber + 1;
+        int firstNumber = random.nextInt(21);
 
-        String question = "What comes after " + Integer.toString(firstNumber) + " ?";
+        String question = "Find equivalent number of " + RomanNumber.toRoman(firstNumber) + " ?";
         textViewQuestion.setText(question);
 
         locationOfCorrectAnswer = random.nextInt(4);
 
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
-                answersList.add(secondNumber);
+                answersList.add(firstNumber);
             } else {
-                int wrongAnswer = random.nextInt(101);
+                int wrongAnswer = random.nextInt(21);
 
-                while (wrongAnswer == secondNumber)
-                    wrongAnswer = random.nextInt(101);
+                while (wrongAnswer == firstNumber)
+                    wrongAnswer = random.nextInt(21);
 
                 answersList.add(wrongAnswer);
             }
@@ -344,4 +344,5 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
         if (countDownTimer != null)
             countDownTimer.cancel();
     }
+
 }

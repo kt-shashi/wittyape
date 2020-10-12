@@ -1,4 +1,4 @@
-package com.wittyape.android.classone;
+package com.wittyape.android.classtwo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,11 +12,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
-import com.wittyape.android.helperclasses.NumberWordConverter;
+import com.wittyape.android.helperclasses.RomanNumber;
 
-public class LearnMathsOneCount extends Fragment {
+public class LearnMathsTwoRoman extends Fragment {
 
-    public LearnMathsOneCount() {
+    public LearnMathsTwoRoman() {
 
     }
 
@@ -27,27 +27,26 @@ public class LearnMathsOneCount extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.learnmathsonecount, container, false);
+        View view = inflater.inflate(R.layout.learnmathstworoman, container, false);
 
-        getCountingData();
+        getRomanData();
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, countingData);
 
-        listView = view.findViewById(R.id.list_view_count_one);
+        listView = view.findViewById(R.id.list_view_roman_two);
         listView.setAdapter(arrayAdapter);
 
         return view;
 
     }
 
-    private void getCountingData() {
+    private void getRomanData() {
 
-        countingData = new String[30];
-        NumberWordConverter numberWordConverter = new NumberWordConverter();
+        countingData = new String[20];
 
-        for (int countNumber = 0; countNumber < 30; countNumber++) {
+        for (int romanNumber = 0; romanNumber < 20; romanNumber++) {
 
-            String word = numberWordConverter.convert(countNumber + 1);
-            countingData[countNumber] = (countNumber + 1) + " -> " + word.toUpperCase();
+            String word = RomanNumber.toRoman(romanNumber + 1);
+            countingData[romanNumber] = (romanNumber + 1) + " -> " + word.toUpperCase();
 
         }
 

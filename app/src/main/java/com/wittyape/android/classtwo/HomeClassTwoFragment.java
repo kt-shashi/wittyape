@@ -36,6 +36,8 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     private ImageButton countingClicked;
     private ImageButton additionClicked;
     private ImageButton subtractionClicked;
+    private ImageButton multiplicationClicked;
+    private ImageButton romanClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -71,9 +73,14 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
         countingClicked = view.findViewById(R.id.image_button_counting_home_class_two);
         additionClicked = view.findViewById(R.id.image_button_addition_home_class_two);
         subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_two);
+        multiplicationClicked = view.findViewById(R.id.image_button_multiplication_home_class_two);
+        romanClicked = view.findViewById(R.id.image_button_roman_home_class_two);
+
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
+        multiplicationClicked.setOnClickListener(this);
+        romanClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -131,21 +138,27 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View view) {
 
-//        Intent intent = new Intent(getActivity(), TabActivity.class);
-//
-//        switch (view.getId()) {
-//            case R.id.image_button_counting_home_class_one:
-//                intent.putExtra("userClass", "countingtwo");
-//                break;
-//            case R.id.image_button_addition_home_class_one:
-//                intent.putExtra("userClass", "addtwo");
-//                break;
-//            case R.id.image_button_subtraction_home_class_one:
-//                intent.putExtra("userClass", "subtracttwo");
-//                break;
-//        }
-//
-//        startActivity(intent);
+        Intent intent = new Intent(getActivity(), TabActivity.class);
+
+        switch (view.getId()) {
+            case R.id.image_button_counting_home_class_two:
+                intent.putExtra("userClass", "countingtwo");
+                break;
+            case R.id.image_button_addition_home_class_two:
+                intent.putExtra("userClass", "addtwo");
+                break;
+            case R.id.image_button_subtraction_home_class_two:
+                intent.putExtra("userClass", "subtracttwo");
+                break;
+            case R.id.image_button_multiplication_home_class_two:
+                intent.putExtra("userClass", "multiplytwo");
+                break;
+            case R.id.image_button_roman_home_class_two:
+                intent.putExtra("userClass", "romantwo");
+                break;
+        }
+
+        startActivity(intent);
 
     }
 

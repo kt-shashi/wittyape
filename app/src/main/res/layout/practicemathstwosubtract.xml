@@ -14,7 +14,7 @@
         android:padding="2dp">
 
         <TextView
-            android:id="@+id/text_view_timer_couting_class_two"
+            android:id="@+id/text_view_timer_subtract_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_score_couting_class_two"
+            android:id="@+id/text_view_score_subtract_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="18dp"
@@ -51,13 +51,13 @@
         android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal"
         android:padding="7dp"
-        android:text="@string/practice_couting"
+        android:text="@string/practice_subtraction"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/text_view_question_counting_class_two"
+        android:id="@+id/text_view_question_subtract_class_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -79,7 +79,7 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/button_count_00_class_two"
+            android:id="@+id/button_subtract_00_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -92,7 +92,7 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/button_count_01_class_two"
+            android:id="@+id/button_subtract_01_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -116,7 +116,7 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/button_count_10_class_two"
+            android:id="@+id/button_subtract_10_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -129,7 +129,7 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/button_count_11_class_two"
+            android:id="@+id/button_subtract_11_class_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -144,7 +144,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_start_count_class_two"
+        android:id="@+id/button_start_subtract_class_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
-import com.wittyape.android.classone.NumberWordConverter;
+import com.wittyape.android.helperclasses.NumberWordConverter;
 
 public class LearnMathsTwoCount extends Fragment {
 
@@ -41,10 +41,10 @@ public class LearnMathsTwoCount extends Fragment {
 
     private void getCountingData() {
 
-        countingData = new String[30];
+        countingData = new String[100];
         NumberWordConverter numberWordConverter = new NumberWordConverter();
 
-        for (int countNumber = 0; countNumber < 30; countNumber++) {
+        for (int countNumber = 0; countNumber < 100; countNumber++) {
 
             String word = numberWordConverter.convert(countNumber + 1);
             countingData[countNumber] = (countNumber + 1) + " -> " + word.toUpperCase();

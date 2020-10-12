@@ -31,9 +31,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class PracticeMathsTwoCount extends Fragment implements View.OnClickListener {
+public class PracticeMathsTwoMultiply extends Fragment implements View.OnClickListener {
 
-    public PracticeMathsTwoCount() {
+    public PracticeMathsTwoMultiply() {
 
     }
 
@@ -65,8 +65,7 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.practicemathstwocount, container, false);
+        View view = inflater.inflate(R.layout.practicemathstwomultiply, container, false);
 
         initViews(view);
 
@@ -74,22 +73,21 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
         firebaseFirestore = FirebaseFirestore.getInstance();
 
         return view;
-
     }
 
     private void initViews(View view) {
 
-        textViewTimer = view.findViewById(R.id.text_view_timer_couting_class_two);
-        textViewScore = view.findViewById(R.id.text_view_score_couting_class_two);
+        textViewTimer = view.findViewById(R.id.text_view_timer_multiply_class_two);
+        textViewScore = view.findViewById(R.id.text_view_score_multiply_class_two);
 
-        textViewQuestion = view.findViewById(R.id.text_view_question_counting_class_two);
+        textViewQuestion = view.findViewById(R.id.text_view_question_multiply_class_two);
 
-        buttonAnswer00 = view.findViewById(R.id.button_count_00_class_two);
-        buttonAnswer01 = view.findViewById(R.id.button_count_01_class_two);
-        buttonAnswer10 = view.findViewById(R.id.button_count_10_class_two);
-        buttonAnswer11 = view.findViewById(R.id.button_count_11_class_two);
+        buttonAnswer00 = view.findViewById(R.id.button_multiply_00_class_two);
+        buttonAnswer01 = view.findViewById(R.id.button_multiply_01_class_two);
+        buttonAnswer10 = view.findViewById(R.id.button_multiply_10_class_two);
+        buttonAnswer11 = view.findViewById(R.id.button_multiply_11_class_two);
 
-        buttonStartStop = view.findViewById(R.id.button_start_count_class_two);
+        buttonStartStop = view.findViewById(R.id.button_start_multiply_class_two);
 
         buttonAnswer00.setOnClickListener(this);
         buttonAnswer01.setOnClickListener(this);
@@ -105,7 +103,7 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.button_start_count_class_two) {
+        if (view.getId() == R.id.button_start_multiply_class_two) {
 
             preCountingTimer();
             setScore();
@@ -139,21 +137,21 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
         answersList.clear();
         Random random = new Random();
 
-        int firstNumber = random.nextInt(101);
-        int secondNumber = firstNumber + 1;
+        int firstNumber = random.nextInt(11);
+        int secondNumber = random.nextInt(11);
 
-        String question = "What comes after " + Integer.toString(firstNumber) + " ?";
+        String question = "Multiply : " + firstNumber + " x " + secondNumber + " =";
         textViewQuestion.setText(question);
 
         locationOfCorrectAnswer = random.nextInt(4);
 
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
-                answersList.add(secondNumber);
+                answersList.add(firstNumber * secondNumber);
             } else {
                 int wrongAnswer = random.nextInt(101);
 
-                while (wrongAnswer == secondNumber)
+                while (wrongAnswer == (firstNumber * secondNumber))
                     wrongAnswer = random.nextInt(101);
 
                 answersList.add(wrongAnswer);
@@ -344,4 +342,5 @@ public class PracticeMathsTwoCount extends Fragment implements View.OnClickListe
         if (countDownTimer != null)
             countDownTimer.cancel();
     }
+
 }

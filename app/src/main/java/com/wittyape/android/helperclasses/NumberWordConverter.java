@@ -1,4 +1,4 @@
-package com.wittyape.android.classone;
+package com.wittyape.android.helperclasses;
 
 public class NumberWordConverter {
     public final String[] units = {
