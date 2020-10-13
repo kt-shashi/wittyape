@@ -52,9 +52,14 @@
         <menu>
 
             <item
-                android:id="@+id/menu_item_help"
-                android:icon="@drawable/icon_help"
-                android:title="@string/help" />
+                android:id="@+id/menu_item_about"
+                android:icon="@drawable/icon_about"
+                android:title="@string/about" />
+
+            <item
+                android:id="@+id/menu_item_terms_condition"
+                android:icon="@drawable/icon_terms_condition"
+                android:title="@string/terms_condition" />
 
             <item
                 android:id="@+id/menu_item_exit"

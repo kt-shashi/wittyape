@@ -38,8 +38,9 @@ import com.wittyape.android.classone.HomeClassOneFragment;
 import com.wittyape.android.classone.MathsClassOneFragment;
 import com.wittyape.android.classtwo.HomeClassTwoFragment;
 import com.wittyape.android.classtwo.MathsClassTwoFragment;
-import com.wittyape.android.helpfeedback.HelpFeedbackFragment;
+import com.wittyape.android.helpfeedback.AboutFragment;
 import com.wittyape.android.helpfeedback.ScoringSystem;
+import com.wittyape.android.helpfeedback.TermsConditionFragment;
 import com.wittyape.android.leaderboard.LeaderboardFragment;
 import com.wittyape.android.login.LoginActivity;
 
@@ -194,8 +195,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new ScoringSystem();
                     break;
 
-                case R.id.menu_item_help:
-                    fragment = new HelpFeedbackFragment();
+                case R.id.menu_item_about:
+                    fragment = new AboutFragment();
+                    break;
+
+                case R.id.menu_item_terms_condition:
+                    fragment = new TermsConditionFragment();
                     break;
 
                 case R.id.menu_item_exit:
@@ -223,8 +228,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new ScoringSystem();
                     break;
 
-                case R.id.menu_item_help:
-                    fragment = new HelpFeedbackFragment();
+                case R.id.menu_item_about:
+                    fragment = new AboutFragment();
+                    break;
+
+                case R.id.menu_item_terms_condition:
+                    fragment = new TermsConditionFragment();
                     break;
 
                 case R.id.menu_item_exit:

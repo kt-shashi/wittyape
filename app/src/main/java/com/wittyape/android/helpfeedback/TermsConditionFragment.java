@@ -11,19 +11,15 @@ import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
 
-public class HelpFeedbackFragment extends Fragment {
+public class TermsConditionFragment extends Fragment {
 
-    public HelpFeedbackFragment() {
+    public TermsConditionFragment() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_help, container, false);
-        return view;
-
+        return inflater.inflate(R.layout.fragment_terms_condition, container, false);
     }
-
 }
