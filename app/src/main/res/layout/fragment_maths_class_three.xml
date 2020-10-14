@@ -1,6 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_custom">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_horizontal"
+            android:text="@string/master_mathematics"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/design_button_maths"
+                android:padding="30dp"
+                android:src="@drawable/icon_addition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_addition_class_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/design_button_answer_count"
+                android:elevation="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:text="@string/addition"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/design_button_maths"
+                android:padding="30dp"
+                android:src="@drawable/icon_subtraction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_subtraction_class_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/design_button_answer_count"
+                android:elevation="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:text="@string/subtraction"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/design_button_maths"
+                android:padding="30dp"
+                android:src="@drawable/icon_multiplication"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_multiplication_class_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/design_button_answer_count"
+                android:elevation="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:text="@string/multiplication"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/design_button_maths"
+                android:padding="30dp"
+                android:src="@drawable/icon_roman"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_roman_class_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/design_button_answer_count"
+                android:elevation="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:text="@string/roman_numeral"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>

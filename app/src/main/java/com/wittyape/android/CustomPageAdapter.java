@@ -11,6 +11,14 @@ import com.wittyape.android.classone.LearnMathsOneSubtract;
 import com.wittyape.android.classone.PracticeMathsOneAdd;
 import com.wittyape.android.classone.PracticeMathsOneCount;
 import com.wittyape.android.classone.PracticeMathsOneSubtract;
+import com.wittyape.android.classthree.LearnMathsThreeAdd;
+import com.wittyape.android.classthree.LearnMathsThreeMultiply;
+import com.wittyape.android.classthree.LearnMathsThreeRoman;
+import com.wittyape.android.classthree.LearnMathsThreeSubtract;
+import com.wittyape.android.classthree.PracticeMathsThreeAdd;
+import com.wittyape.android.classthree.PracticeMathsThreeMultiply;
+import com.wittyape.android.classthree.PracticeMathsThreeRoman;
+import com.wittyape.android.classthree.PracticeMathsThreeSubtract;
 import com.wittyape.android.classtwo.LearnMathsTwoAdd;
 import com.wittyape.android.classtwo.LearnMathsTwoCount;
 import com.wittyape.android.classtwo.LearnMathsTwoMultiply;
@@ -122,6 +130,50 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return new LearnMathsTwoRoman();
                 case 1:
                     return new PracticeMathsTwoRoman();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("addthree")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsThreeAdd();
+                case 1:
+                    return new PracticeMathsThreeAdd();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("subtractthree")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsThreeSubtract();
+                case 1:
+                    return new PracticeMathsThreeSubtract();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("multiplythree")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsThreeMultiply();
+                case 1:
+                    return new PracticeMathsThreeMultiply();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("romanthree")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsThreeRoman();
+                case 1:
+                    return new PracticeMathsThreeRoman();
                 default:
                     return null;
             }

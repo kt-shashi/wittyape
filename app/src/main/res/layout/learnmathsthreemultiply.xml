@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_view_multiplication_table_header_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/design_button_answer_count"
+        android:elevation="5dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal"
+        android:text="@string/multiplication_table"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_multiplication_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:progressTint="@color/colorPrimaryDark" />
+
+    <ListView
+        android:id="@+id/list_view_multiplication_table_three"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+
+</LinearLayout>

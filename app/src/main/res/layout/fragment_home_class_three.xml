@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -96,6 +97,140 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|start"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_addition_home_class_three"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:padding="40dp"
+                        android:src="@drawable/icon_addition"
+                        tools:ignore="ContentDescription" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/addition"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_subtraction_home_class_three"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:padding="40dp"
+                        android:src="@drawable/icon_subtraction"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/subtraction"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_multiplication_home_class_three"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:padding="40dp"
+                        android:src="@drawable/icon_multiplication"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/multiplication"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_roman_home_class_three"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:padding="40dp"
+                        android:src="@drawable/icon_roman"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/roman_numeral"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
 
     </LinearLayout>
 
