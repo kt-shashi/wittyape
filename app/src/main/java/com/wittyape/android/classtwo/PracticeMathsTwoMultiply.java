@@ -137,8 +137,8 @@ public class PracticeMathsTwoMultiply extends Fragment implements View.OnClickLi
         answersList.clear();
         Random random = new Random();
 
-        int firstNumber = random.nextInt(11);
-        int secondNumber = random.nextInt(11);
+        int firstNumber = random.nextInt(5);
+        int secondNumber = random.nextInt(5);
 
         String question = "Multiply : " + firstNumber + " x " + secondNumber + " =";
         textViewQuestion.setText(question);
@@ -149,10 +149,10 @@ public class PracticeMathsTwoMultiply extends Fragment implements View.OnClickLi
             if (i == locationOfCorrectAnswer) {
                 answersList.add(firstNumber * secondNumber);
             } else {
-                int wrongAnswer = random.nextInt(101);
+                int wrongAnswer = random.nextInt(21);
 
                 while (wrongAnswer == (firstNumber * secondNumber))
-                    wrongAnswer = random.nextInt(101);
+                    wrongAnswer = random.nextInt(21);
 
                 answersList.add(wrongAnswer);
             }

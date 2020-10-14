@@ -36,10 +36,13 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.wittyape.android.classone.HomeClassOneFragment;
 import com.wittyape.android.classone.MathsClassOneFragment;
+import com.wittyape.android.classthree.HomeClassThreeFragment;
+import com.wittyape.android.classthree.MathsClassThreeFragment;
 import com.wittyape.android.classtwo.HomeClassTwoFragment;
 import com.wittyape.android.classtwo.MathsClassTwoFragment;
 import com.wittyape.android.helpfeedback.AboutFragment;
 import com.wittyape.android.helpfeedback.ScoringSystem;
+import com.wittyape.android.helpfeedback.SyllabusFragment;
 import com.wittyape.android.helpfeedback.TermsConditionFragment;
 import com.wittyape.android.leaderboard.LeaderboardFragment;
 import com.wittyape.android.login.LoginActivity;
@@ -141,6 +144,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                             .beginTransaction()
                                             .replace(R.id.frame_layout_main_activity, new HomeClassTwoFragment())
                                             .commit();
+                                } else if (userClass.equals("Class3")) {
+                                    //Set Home LeaderboardFragment by default
+                                    getSupportFragmentManager()
+                                            .beginTransaction()
+                                            .replace(R.id.frame_layout_main_activity, new HomeClassThreeFragment())
+                                            .commit();
                                 }
 
                             } else {
@@ -187,6 +196,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new MathsClassOneFragment();
                     break;
 
+                case R.id.menu_item_syllabus:
+                    fragment = new SyllabusFragment();
+                    break;
+
                 case R.id.menu_item_leaderboard:
                     fragment = setLeaderBoardFragment();
                     break;
@@ -218,6 +231,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 case R.id.menu_item_maths:
                     fragment = new MathsClassTwoFragment();
+                    break;
+
+                case R.id.menu_item_syllabus:
+                    fragment = new SyllabusFragment();
+                    break;
+
+                case R.id.menu_item_leaderboard:
+                    fragment = setLeaderBoardFragment();
+                    break;
+
+                case R.id.menu_item_scoring_system:
+                    fragment = new ScoringSystem();
+                    break;
+
+                case R.id.menu_item_about:
+                    fragment = new AboutFragment();
+                    break;
+
+                case R.id.menu_item_terms_condition:
+                    fragment = new TermsConditionFragment();
+                    break;
+
+                case R.id.menu_item_exit:
+                    finish();
+
+            }
+
+        } else if (userClass.equals("Class3")) {
+
+            switch (item.getItemId()) {
+
+                case R.id.menu_item_home:
+                    fragment = new HomeClassThreeFragment();
+                    break;
+
+                case R.id.menu_item_maths:
+                    fragment = new MathsClassThreeFragment();
+                    break;
+
+                case R.id.menu_item_syllabus:
+                    fragment = new SyllabusFragment();
                     break;
 
                 case R.id.menu_item_leaderboard:
@@ -268,6 +322,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             arguments.putString("class", "scoreclass1");
         } else if (userClass.equals("Class2")) {
             arguments.putString("class", "scoreclass2");
+        } else if (userClass.equals("Class3")) {
+            arguments.putString("class", "scoreclass3");
         }
 
         leaderboardFragment.setArguments(arguments);
@@ -413,6 +469,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 spinnerClass.setSelection(1);
                             } else if (spinnerClassData.equals("Class2")) {
                                 spinnerClass.setSelection(2);
+                            } else if (spinnerClassData.equals("Class3")) {
+                                spinnerClass.setSelection(3);
                             }
 
                         }

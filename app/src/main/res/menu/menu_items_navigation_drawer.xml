@@ -21,6 +21,11 @@
                 android:icon="@drawable/icon_menu_english"
                 android:title="@string/english" />
 
+            <item
+                android:id="@+id/menu_item_syllabus"
+                android:icon="@drawable/icon_syllabus"
+                android:title="@string/syllabus" />
+
         </menu>
 
     </item>

@@ -1,6 +1,5 @@
-package com.wittyape.android.classtwo;
+package com.wittyape.android.classthree;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,23 +20,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.wittyape.android.R;
-import com.wittyape.android.TabActivity;
 
-public class HomeClassTwoFragment extends Fragment implements View.OnClickListener {
+public class HomeClassThreeFragment extends Fragment {
 
-    public HomeClassTwoFragment() {
+    public HomeClassThreeFragment() {
 
     }
 
     private TextView textViewWelcome;
     private TextView textViewScore;
     private ProgressBar progressBar;
-
-    private ImageButton countingClicked;
-    private ImageButton additionClicked;
-    private ImageButton subtractionClicked;
-    private ImageButton multiplicationClicked;
-    private ImageButton romanClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -48,7 +40,7 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home_class_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_class_three, container, false);
 
         initViews(view);
 
@@ -65,22 +57,10 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     }
 
     private void initViews(View view) {
-        textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment_two);
-        textViewScore = view.findViewById(R.id.text_view_score_home_fragment_two);
-        progressBar = view.findViewById(R.id.progress_bar_home_class_two);
+        textViewWelcome = view.findViewById(R.id.text_view_welcome_home_fragment_three);
+        textViewScore = view.findViewById(R.id.text_view_score_home_fragment_three);
+        progressBar = view.findViewById(R.id.progress_bar_home_class_three);
         progressBar.setVisibility(View.GONE);
-
-        countingClicked = view.findViewById(R.id.image_button_counting_home_class_two);
-        additionClicked = view.findViewById(R.id.image_button_addition_home_class_two);
-        subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_two);
-        multiplicationClicked = view.findViewById(R.id.image_button_multiplication_home_class_two);
-        romanClicked = view.findViewById(R.id.image_button_roman_home_class_two);
-
-        countingClicked.setOnClickListener(this);
-        additionClicked.setOnClickListener(this);
-        subtractionClicked.setOnClickListener(this);
-        multiplicationClicked.setOnClickListener(this);
-        romanClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -136,33 +116,6 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     }
 
     @Override
-    public void onClick(View view) {
-
-        Intent intent = new Intent(getActivity(), TabActivity.class);
-
-        switch (view.getId()) {
-            case R.id.image_button_counting_home_class_two:
-                intent.putExtra("userClass", "countingtwo");
-                break;
-            case R.id.image_button_addition_home_class_two:
-                intent.putExtra("userClass", "addtwo");
-                break;
-            case R.id.image_button_subtraction_home_class_two:
-                intent.putExtra("userClass", "subtracttwo");
-                break;
-            case R.id.image_button_multiplication_home_class_two:
-                intent.putExtra("userClass", "multiplytwo");
-                break;
-            case R.id.image_button_roman_home_class_two:
-                intent.putExtra("userClass", "romantwo");
-                break;
-        }
-
-        startActivity(intent);
-
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
 
@@ -179,4 +132,5 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
         }
 
     }
+
 }
