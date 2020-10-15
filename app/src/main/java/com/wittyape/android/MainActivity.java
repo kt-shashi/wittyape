@@ -34,6 +34,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.classfour.HomeClassFourFragment;
+import com.wittyape.android.classfour.MathsClassFourFragment;
 import com.wittyape.android.classone.HomeClassOneFragment;
 import com.wittyape.android.classone.MathsClassOneFragment;
 import com.wittyape.android.classthree.HomeClassThreeFragment;
@@ -149,6 +151,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     getSupportFragmentManager()
                                             .beginTransaction()
                                             .replace(R.id.frame_layout_main_activity, new HomeClassThreeFragment())
+                                            .commit();
+                                } else if (userClass.equals("Class4")) {
+                                    //Set Home LeaderboardFragment by default
+                                    getSupportFragmentManager()
+                                            .beginTransaction()
+                                            .replace(R.id.frame_layout_main_activity, new HomeClassFourFragment())
                                             .commit();
                                 }
 
@@ -295,6 +303,43 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
 
+        } else if (userClass.equals("Class4")) {
+
+            switch (item.getItemId()) {
+
+                case R.id.menu_item_home:
+                    fragment = new HomeClassFourFragment();
+                    break;
+
+                case R.id.menu_item_maths:
+                    fragment = new MathsClassFourFragment();
+                    break;
+
+                case R.id.menu_item_syllabus:
+                    fragment = new SyllabusFragment();
+                    break;
+
+                case R.id.menu_item_leaderboard:
+                    fragment = setLeaderBoardFragment();
+                    break;
+
+                case R.id.menu_item_scoring_system:
+                    fragment = new ScoringSystem();
+                    break;
+
+                case R.id.menu_item_about:
+                    fragment = new AboutFragment();
+                    break;
+
+                case R.id.menu_item_terms_condition:
+                    fragment = new TermsConditionFragment();
+                    break;
+
+                case R.id.menu_item_exit:
+                    finish();
+
+            }
+
         }
 
         if (fragment == null) {
@@ -324,6 +369,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             arguments.putString("class", "scoreclass2");
         } else if (userClass.equals("Class3")) {
             arguments.putString("class", "scoreclass3");
+        } else if (userClass.equals("Class4")) {
+            arguments.putString("class", "scoreclass4");
         }
 
         leaderboardFragment.setArguments(arguments);
@@ -471,6 +518,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 spinnerClass.setSelection(2);
                             } else if (spinnerClassData.equals("Class3")) {
                                 spinnerClass.setSelection(3);
+                            } else if (spinnerClassData.equals("Class4")) {
+                                spinnerClass.setSelection(4);
                             }
 
                         }

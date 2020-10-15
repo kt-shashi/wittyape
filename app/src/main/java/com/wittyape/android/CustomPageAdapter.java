@@ -5,6 +5,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.wittyape.android.classfour.LearnMathsFourAdd;
+import com.wittyape.android.classfour.LearnMathsFourMultiply;
+import com.wittyape.android.classfour.LearnMathsFourRoman;
+import com.wittyape.android.classfour.LearnMathsFourSubtract;
+import com.wittyape.android.classfour.PracticeMathsFourAdd;
+import com.wittyape.android.classfour.PracticeMathsFourMultiply;
+import com.wittyape.android.classfour.PracticeMathsFourRoman;
+import com.wittyape.android.classfour.PracticeMathsFourSubtract;
 import com.wittyape.android.classone.LearnMathsOneAdd;
 import com.wittyape.android.classone.LearnMathsOneCount;
 import com.wittyape.android.classone.LearnMathsOneSubtract;
@@ -174,6 +182,50 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return new LearnMathsThreeRoman();
                 case 1:
                     return new PracticeMathsThreeRoman();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("addfour")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsFourAdd();
+                case 1:
+                    return new PracticeMathsFourAdd();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("subtractfour")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsFourSubtract();
+                case 1:
+                    return new PracticeMathsFourSubtract();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("multiplyfour")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsFourMultiply();
+                case 1:
+                    return new PracticeMathsFourMultiply();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("romanfour")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnMathsFourRoman();
+                case 1:
+                    return new PracticeMathsFourRoman();
                 default:
                     return null;
             }

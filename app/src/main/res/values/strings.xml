@@ -89,6 +89,7 @@
     <string name="class_three">Class 3</string>
     <string name="class_three_syllabus_maths">Addition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nRoman numerals [1 to 50]\n\nMultiplication [Single digit numbers, 1 to 6]\n\nMultiplication table : [1 to 6]</string>
     <string name="class_four">Class 4</string>
+    <string name="class_four_syllabus_maths">Addition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nRoman numerals [1 to 50]\n\nMultiplication table [1 to 10]</string>
     <string name="syllabus">Syllabus</string>
     <string name="multiplication_table">Multiplication Table</string>
     <string-array name="class_selector">]
@@ -96,5 +97,6 @@
         <item>Class1</item>
         <item>Class2</item>
         <item>Class3</item>
+        <item>Class4</item>
     </string-array>
 </resources>
