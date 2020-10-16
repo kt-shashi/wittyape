@@ -1,5 +1,7 @@
 package com.wittyape.android;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,9 +15,11 @@ import com.wittyape.android.classfour.PracticeMathsFourAdd;
 import com.wittyape.android.classfour.PracticeMathsFourMultiply;
 import com.wittyape.android.classfour.PracticeMathsFourRoman;
 import com.wittyape.android.classfour.PracticeMathsFourSubtract;
+import com.wittyape.android.classone.LearnEnglishOneAnimalBaby;
 import com.wittyape.android.classone.LearnMathsOneAdd;
 import com.wittyape.android.classone.LearnMathsOneCount;
 import com.wittyape.android.classone.LearnMathsOneSubtract;
+import com.wittyape.android.classone.PracticeEnglishFragment;
 import com.wittyape.android.classone.PracticeMathsOneAdd;
 import com.wittyape.android.classone.PracticeMathsOneCount;
 import com.wittyape.android.classone.PracticeMathsOneSubtract;
@@ -37,6 +41,7 @@ import com.wittyape.android.classtwo.PracticeMathsTwoCount;
 import com.wittyape.android.classtwo.PracticeMathsTwoMultiply;
 import com.wittyape.android.classtwo.PracticeMathsTwoRoman;
 import com.wittyape.android.classtwo.PracticeMathsTwoSubtract;
+import com.wittyape.android.leaderboard.LeaderboardFragment;
 
 class CustomPageAdapter extends FragmentPagerAdapter {
 
@@ -226,6 +231,23 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return new LearnMathsFourRoman();
                 case 1:
                     return new PracticeMathsFourRoman();
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("animalbabyone")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "onebabies");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
                 default:
                     return null;
             }

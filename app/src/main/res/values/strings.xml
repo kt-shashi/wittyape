@@ -92,6 +92,12 @@
     <string name="class_four_syllabus_maths">Addition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nRoman numerals [1 to 50]\n\nMultiplication table [1 to 10]</string>
     <string name="syllabus">Syllabus</string>
     <string name="multiplication_table">Multiplication Table</string>
+    <string name="master_english">Master English</string>
+    <string name="animal_and_their_babies">Animal and\ntheir Babies</string>
+    <string name="answer">Answer</string>
+    <string name="retry">Retry</string>
+    <string name="check">Check</string>
+    <string name="next">Next</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

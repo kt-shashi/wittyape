@@ -37,6 +37,8 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     private ImageButton additionClicked;
     private ImageButton subtractionClicked;
 
+    private ImageButton animalBabyClicked;
+
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseFirestore firebaseFirestore;
@@ -73,9 +75,12 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         countingClicked = view.findViewById(R.id.image_button_counting_home_class_one);
         additionClicked = view.findViewById(R.id.image_button_addition_home_class_one);
         subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_one);
+        animalBabyClicked = view.findViewById(R.id.image_button_animalbaby_enlish_one);
+
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
+        animalBabyClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -144,6 +149,9 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
                 break;
             case R.id.image_button_subtraction_home_class_one:
                 intent.putExtra("userClass", "subtractone");
+                break;
+            case R.id.image_button_animalbaby_enlish_one:
+                intent.putExtra("userClass", "animalbabyone");
                 break;
         }
 

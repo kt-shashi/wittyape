@@ -1,13 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="60dp"
-    android:height="60dp"
-    android:tint="@color/colorPrimaryDark"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
+    android:width="70dp"
+    android:height="70dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M11.99,2C6.47,2 2,6.48 2,12s4.47,10 9.99,10C17.52,22 22,17.52 22,12S17.52,2 11.99,2zM12,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M58.88 90h453.12v30h-453.12z" />
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M12.5,7H11v6l5.25,3.15 0.75,-1.23 -4.5,-2.67z" />
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M58.88 30h453.12v30h-453.12z" />
+    <path
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M120.75 287.08h391.25v30h-391.25z" />
+    <path
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M120.75 227.08h391.25v30h-391.25z" />
+    <path
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M178.93 482h333.07v30h-333.07z" />
+    <path
+        android:fillColor="@color/light_blue_custom"
+        android:pathData="M178.93 422h333.07v30h-333.07z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M0 0h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M0 197.075h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M59.526 197.075h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M0 392h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M59.526 392h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M59.526 392h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M119.052 392h30v120h-30z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 422h255.5v30h-255.5z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 482h255.5v30h-255.5z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 30h255.5v30h-255.5z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 90h255.5v30h-255.5z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 227.08h255.5v30h-255.5z" />
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M256.5 287.08h255.5v30h-255.5z" />
 </vector>
