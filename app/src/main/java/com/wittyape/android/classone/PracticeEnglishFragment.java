@@ -1,6 +1,7 @@
 package com.wittyape.android.classone;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +17,19 @@ import androidx.fragment.app.Fragment;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.wittyape.android.R;
 import com.wittyape.android.helperclasses.QuestionModel;
+import com.wittyape.android.leaderboard.LeaderboardModel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PracticeEnglishFragment extends Fragment implements View.OnClickListener {
 
@@ -44,6 +50,9 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
 
     private FirebaseFirestore firestore;
     private CollectionReference collectionReference;
+    private FirebaseAuth firebaseAuth;
+
+    public static final String COLLECTION_NAME = "users";
 
     private String heading;
 
@@ -55,6 +64,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
 
         String dbname = getArguments().getString("dbname");
 
+        firebaseAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
         collectionReference = firestore.collection(dbname);
 
@@ -99,7 +109,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
                 getData();
                 break;
             case R.id.button_check_english:
-                if (textInputLayoutAnswer.getEditText().getText().toString().toLowerCase().equals(questionList.get(questionCount).getAnswer())) {
+                if (textInputLayoutAnswer.getEditText().getText().toString().trim().toLowerCase().equals(questionList.get(questionCount).getAnswer())) {
                     textInputLayoutAnswer.setError(null);
                     buttonCheck.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_correct, 0);
                     buttonCheck.setBackgroundResource(R.drawable.design_button_correct);
@@ -113,7 +123,6 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
                     buttonCheck.setBackgroundResource(R.drawable.design_button_wrong);
                     isAnswered = true;
                 }
-
                 break;
             case R.id.button_next_english:
                 if (textInputLayoutAnswer.getEditText().getText().toString().equals("")) {
@@ -134,6 +143,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
         if (questionCount >= questionList.size()) {
             textViewQuestion.setText("");
             showResult(solvedCount, questionCount);
+            updateScoreInFirestore(solvedCount);
             practiceOver();
             return;
         }
@@ -195,8 +205,69 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
 
     private void setHeading() {
         if (heading.equals("onebabies")) {
-            textViewHeading.setText("Enter the baby name of the animal");
+            textViewHeading.setText("Enter the baby name of the animal:");
+        } else if (heading.equals("oneopposite")) {
+            textViewHeading.setText("Enter the antonym of:");
+        } else if (heading.equals("oneadjectives")) {
+            textViewHeading.setText("Find the adjective in the sentence:");
         }
+    }
+
+    private void updateScoreInFirestore(final int finalScore) {
+
+        final CollectionReference collectionReference = firestore.collection(COLLECTION_NAME);
+
+        String userClassName = null;
+        if (heading.equals("onebabies") || heading.equals("oneopposite") || heading.equals("oneadjectives")) {
+            userClassName = "scoreclass1";
+        }
+        if (userClassName == null || userClassName.isEmpty())
+            userClassName = "scoreclass1";
+
+        final CollectionReference collectionReferenceScore = firestore.collection(userClassName);
+
+        collectionReference
+                .document(firebaseAuth.getCurrentUser().getUid())
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                        //Check if the document exists
+                        if (documentSnapshot.exists()) {
+
+                            String userScore = documentSnapshot.getString("score");
+                            final String userName = documentSnapshot.getString("name");
+
+                            if (userScore.isEmpty()) {
+                                userScore = "0";
+                            }
+
+                            final int updatedScore = finalScore + Integer.parseInt(userScore);
+
+                            Map<String, Object> data = new HashMap<>();
+                            data.put("score", String.valueOf(updatedScore));
+
+                            collectionReference
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .update(data);
+
+                            LeaderboardModel leaderboardModel = new LeaderboardModel(userName, String.valueOf(updatedScore));
+
+                            collectionReferenceScore
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .set(leaderboardModel);
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
     }
 
     private void showResult(int finalScore, int finalQuestions) {

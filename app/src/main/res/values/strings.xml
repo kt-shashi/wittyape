@@ -98,6 +98,8 @@
     <string name="retry">Retry</string>
     <string name="check">Check</string>
     <string name="next">Next</string>
+    <string name="opposite_words">Antonyms</string>
+    <string name="adjective">Adjectives</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

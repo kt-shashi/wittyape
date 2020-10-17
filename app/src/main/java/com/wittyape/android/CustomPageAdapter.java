@@ -235,7 +235,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return null;
             }
 
-        } else if (userClass.equals("animalbabyone")) {
+        } else if (userClass.equals("onebabies")) {
 
             switch (position) {
                 case 0:
@@ -245,6 +245,40 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
                     Bundle arguments = new Bundle();
                     arguments.putString("dbname", "onebabies");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("oneopposite")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "oneopposite");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("oneadjectives")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "oneadjectives");
                     practiceEnglishFragment.setArguments(arguments);
 
                     return practiceEnglishFragment;

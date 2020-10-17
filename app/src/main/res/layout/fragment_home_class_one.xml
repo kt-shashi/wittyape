@@ -100,12 +100,13 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_horizontal|start"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
@@ -172,6 +173,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:orientation="vertical">
 
                     <ImageButton
@@ -206,7 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/montserrat"
             android:gravity="start"
@@ -218,8 +220,7 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
+            android:padding="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -241,7 +242,7 @@
                         android:layout_gravity="start"
                         android:background="@drawable/design_button_maths"
                         android:elevation="5dp"
-                        android:src="@drawable/icon_animal_baby"
+                        android:src="@drawable/icon_english_animal_baby"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -251,6 +252,63 @@
                         android:fontFamily="@font/roboto"
                         android:gravity="center_horizontal"
                         android:text="@string/animal_and_their_babies"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_opposite_enlish_one"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:src="@drawable/icon_english_opposite"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/opposite_words"
+                        android:textColor="@color/black_custom"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/image_button_adjective_enlish_one"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="start"
+                        android:background="@drawable/design_button_maths"
+                        android:elevation="5dp"
+                        android:src="@drawable/icon_english_adjective"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center_horizontal"
+                        android:text="@string/adjective"
                         android:textColor="@color/black_custom"
                         android:textSize="17sp" />
 

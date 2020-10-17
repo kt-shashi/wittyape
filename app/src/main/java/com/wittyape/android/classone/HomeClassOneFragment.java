@@ -38,6 +38,8 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
     private ImageButton subtractionClicked;
 
     private ImageButton animalBabyClicked;
+    private ImageButton oppositeClicked;
+    private ImageButton adjectiveClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -76,11 +78,15 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
         additionClicked = view.findViewById(R.id.image_button_addition_home_class_one);
         subtractionClicked = view.findViewById(R.id.image_button_subtraction_home_class_one);
         animalBabyClicked = view.findViewById(R.id.image_button_animalbaby_enlish_one);
+        oppositeClicked = view.findViewById(R.id.image_button_opposite_enlish_one);
+        adjectiveClicked = view.findViewById(R.id.image_button_adjective_enlish_one);
 
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
         animalBabyClicked.setOnClickListener(this);
+        oppositeClicked.setOnClickListener(this);
+        adjectiveClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -151,7 +157,13 @@ public class HomeClassOneFragment extends Fragment implements View.OnClickListen
                 intent.putExtra("userClass", "subtractone");
                 break;
             case R.id.image_button_animalbaby_enlish_one:
-                intent.putExtra("userClass", "animalbabyone");
+                intent.putExtra("userClass", "onebabies");
+                break;
+            case R.id.image_button_opposite_enlish_one:
+                intent.putExtra("userClass", "oneopposite");
+                break;
+            case R.id.image_button_adjective_enlish_one:
+                intent.putExtra("userClass", "oneadjectives");
                 break;
         }
 
