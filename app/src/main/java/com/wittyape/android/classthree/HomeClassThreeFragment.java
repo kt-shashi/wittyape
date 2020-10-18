@@ -37,6 +37,8 @@ public class HomeClassThreeFragment extends Fragment implements View.OnClickList
     private ImageButton subtractionClicked;
     private ImageButton multiplicationClicked;
     private ImageButton romanClicked;
+    private ImageButton silentClicked;
+    private ImageButton soundClicked;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -74,10 +76,15 @@ public class HomeClassThreeFragment extends Fragment implements View.OnClickList
         multiplicationClicked = view.findViewById(R.id.image_button_multiplication_home_class_three);
         romanClicked = view.findViewById(R.id.image_button_roman_home_class_three);
 
+        silentClicked = view.findViewById(R.id.image_button_silent_enlish_three);
+        soundClicked = view.findViewById(R.id.image_button_sound_enlish_three);
+
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
         multiplicationClicked.setOnClickListener(this);
         romanClicked.setOnClickListener(this);
+        silentClicked.setOnClickListener(this);
+        soundClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -149,6 +156,12 @@ public class HomeClassThreeFragment extends Fragment implements View.OnClickList
                 break;
             case R.id.image_button_roman_home_class_three:
                 intent.putExtra("userClass", "romanthree");
+                break;
+            case R.id.image_button_silent_enlish_three:
+                intent.putExtra("userClass", "threesilent");
+                break;
+            case R.id.image_button_sound_enlish_three:
+                intent.putExtra("userClass", "threesound");
                 break;
         }
 

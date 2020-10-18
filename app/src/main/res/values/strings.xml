@@ -102,6 +102,10 @@
     <string name="adjective">Adjectives</string>
     <string name="articles">Articles</string>
     <string name="plurals">Plurals</string>
+    <string name="silent_nletters">Silent\nLetters</string>
+    <string name="animal_nsounds">Animal\nSounds</string>
+    <string name="silent_letters">Silent letters</string>
+    <string name="animal_sounds">Animal sounds</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

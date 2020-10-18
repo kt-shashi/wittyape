@@ -214,6 +214,10 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
             textViewHeading.setText("Identify the article in the sentence:");
         } else if (heading.equals("twoplurals")) {
             textViewHeading.setText("Write down the plural of the word:");
+        } else if (heading.equals("threesilent")) {
+            textViewHeading.setText("Which letter is silent in the word:");
+        } else if (heading.equals("threesound")) {
+            textViewHeading.setText("Write the name of sound this animal makes:");
         }
     }
 
@@ -226,6 +230,8 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
             userClassName = "scoreclass1";
         } else if (heading.equals("twoarticle") || heading.equals("twoplurals")) {
             userClassName = "scoreclass2";
+        } else if (heading.equals("threesilent") || heading.equals("threesound")) {
+            userClassName = "scoreclass3";
         }
 
         if (userClassName == null || userClassName.isEmpty())
