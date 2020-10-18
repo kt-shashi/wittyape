@@ -60,8 +60,8 @@
     <string name="loading">loading</string>
     <string name="top_scorer">Top Scorer</string>
     <string name="scoring_system">Scoring system</string>
-    <string name="scoring_system_1">How to Score Points/Scoring System:</string>
-    <string name="scoring_system_2">Each Right answer wins you one point.\n\nYou get 30 seconds to earn maximum points with right answers.\n\nScores of Top 10 students will be published on leaderboard.</string>
+    <string name="scoring_system_1">How to Score Points?</string>
+    <string name="scoring_system_2">Mathematics:\n\nEach Right answer wins you one point.\nYou get 30 seconds to earn maximum points with right answers.\n\nEnglish:\n\nYou get one point on getting the right answer on your first attempt.\n\nNote: Active Internet Connection is needed to update and upload your score.\n\nScores of Top 10 students will be published on leaderboard.</string>
     <string name="multiplication">Multiplication</string>
     <string name="multiplication_text_1">Multiplication is one of the four elementary mathematical operations of arithmetic, with the other ones being addition, subtraction and division.\nThe basic idea of multiplication is repeated addition.</string>
     <string name="multiplication_text_2">Example: 3 × 2 = 3 + 3 = 6</string>
@@ -83,13 +83,17 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="disclaimer_1">The information contained in this platform is for general educational purposes only. We make no representations or warranties of any kind, about the completeness, accuracy, reliability, suitability or availability with respect to the application/website or the information, products, services, or related graphics contained on the application/website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.\nIn no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this application/website.</string>
     <string name="class_one">Class 1</string>
-    <string name="class_one_syllabus_maths">Couting Numbers [1 to 30]\n\nAddition [Single digit numbers]\n\nSubtraction [Single digit numbers]</string>
+    <string name="class_one_syllabus_maths">Counting Numbers [1 to 30]\nAddition [Single digit numbers]\nSubtraction [Single digit numbers]</string>
+    <string name="class_one_syllabus_english">Animal and their Babies\nOpposite words\nAdjectives</string>
     <string name="class_two">Class 2</string>
-    <string name="class_two_syllabus_maths">Couting Numbers [1 to 100]\n\nRoman numerals [1 to 20]\n\nAddition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nMultiplication [Single digit numbers, 1 to 4]</string>
+    <string name="class_two_syllabus_maths">Counting Numbers [1 to 100]\nRoman numerals [1 to 20]\nAddition [Double digit numbers]\nSubtraction [Double digit numbers]\nMultiplication [Single digit numbers, 1 to 4]</string>
+    <string name="class_two_syllabus_english">Articles\nPlurals</string>
     <string name="class_three">Class 3</string>
-    <string name="class_three_syllabus_maths">Addition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nRoman numerals [1 to 50]\n\nMultiplication [Single digit numbers, 1 to 6]\n\nMultiplication table : [1 to 6]</string>
+    <string name="class_three_syllabus_maths">Addition [Double digit numbers]\nSubtraction [Double digit numbers]\nRoman numerals [1 to 50]\nMultiplication [Single digit numbers, 1 to 6]\nMultiplication table : [1 to 6]</string>
+    <string name="class_three_syllabus_english">Animal sounds\nSilent words</string>
     <string name="class_four">Class 4</string>
-    <string name="class_four_syllabus_maths">Addition [Double digit numbers]\n\nSubtraction [Double digit numbers]\n\nRoman numerals [1 to 50]\n\nMultiplication table [1 to 10]</string>
+    <string name="class_four_syllabus_maths">Addition [Double digit numbers]\nSubtraction [Double digit numbers]\nRoman numerals [1 to 50]\nMultiplication table [1 to 10]</string>
+    <string name="class_four_syllabus_english">Verbs\nDegree of Comparison</string>
     <string name="syllabus">Syllabus</string>
     <string name="multiplication_table">Multiplication Table</string>
     <string name="master_english">Master English</string>
@@ -106,6 +110,8 @@
     <string name="animal_nsounds">Animal\nSounds</string>
     <string name="silent_letters">Silent letters</string>
     <string name="animal_sounds">Animal sounds</string>
+    <string name="verb">Verb</string>
+    <string name="degrees_of_comparison">Degrees of\nComparison</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

@@ -34,6 +34,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.wittyape.android.classfour.EnglishClassFourFragment;
 import com.wittyape.android.classfour.HomeClassFourFragment;
 import com.wittyape.android.classfour.MathsClassFourFragment;
 import com.wittyape.android.classone.EnglishClassOneFragment;
@@ -57,7 +58,6 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
 
-    private static final String TAG = "debug_shashi";
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
@@ -133,8 +133,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     userClass = getUserClassFromDatabase;
                                 }
 
-                                Log.d(TAG, "onSuccess: " + userClass);
-
                                 progressBar.setVisibility(View.GONE);
 
                                 if (userClass.equals("Class1")) {
@@ -190,8 +188,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        Log.d(TAG, "onNavigationItemSelected: In change fragment");
 
         Fragment fragment = null;
 
@@ -328,6 +324,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 case R.id.menu_item_maths:
                     fragment = new MathsClassFourFragment();
+                    break;
+
+                case R.id.menu_item_english:
+                    fragment = new EnglishClassFourFragment();
                     break;
 
                 case R.id.menu_item_syllabus:

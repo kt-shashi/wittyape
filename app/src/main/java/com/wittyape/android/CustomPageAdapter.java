@@ -354,6 +354,40 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return null;
             }
 
+        } else if (userClass.equals("fourverbs")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "fourverbs");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
+        } else if (userClass.equals("fourdegree")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "fourdegree");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
         } else {
             return null;
         }

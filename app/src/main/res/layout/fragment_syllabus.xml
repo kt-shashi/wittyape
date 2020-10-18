@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
@@ -46,11 +46,40 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
             android:text="@string/class_one_syllabus_maths"
+            android:textColor="@color/black_custom"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/english"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/class_one_syllabus_english"
             android:textColor="@color/black_custom"
             android:textSize="16sp" />
 
@@ -75,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
@@ -92,11 +121,40 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
             android:text="@string/class_two_syllabus_maths"
+            android:textColor="@color/black_custom"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/english"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/class_two_syllabus_english"
             android:textColor="@color/black_custom"
             android:textSize="16sp" />
 
@@ -121,7 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
@@ -138,11 +196,40 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
             android:text="@string/class_three_syllabus_maths"
+            android:textColor="@color/black_custom"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/english"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/class_three_syllabus_english"
             android:textColor="@color/black_custom"
             android:textSize="16sp" />
 
@@ -167,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
@@ -184,11 +271,40 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
             android:text="@string/class_four_syllabus_maths"
+            android:textColor="@color/black_custom"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/english"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/class_four_syllabus_english"
             android:textColor="@color/black_custom"
             android:textSize="16sp" />
 

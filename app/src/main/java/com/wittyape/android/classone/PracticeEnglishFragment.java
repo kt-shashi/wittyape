@@ -218,6 +218,10 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
             textViewHeading.setText("Which letter is silent in the word:");
         } else if (heading.equals("threesound")) {
             textViewHeading.setText("Write the name of sound this animal makes:");
+        } else if (heading.equals("fourverbs")) {
+            textViewHeading.setText("Identify the verb in the sentence:");
+        } else if (heading.equals("fourdegree")) {
+            textViewHeading.setText("Identify words with degree of comparision:");
         }
     }
 
@@ -232,6 +236,8 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
             userClassName = "scoreclass2";
         } else if (heading.equals("threesilent") || heading.equals("threesound")) {
             userClassName = "scoreclass3";
+        } else if (heading.equals("fourverbs") || heading.equals("fourdegree")) {
+            userClassName = "scoreclass4";
         }
 
         if (userClassName == null || userClassName.isEmpty())

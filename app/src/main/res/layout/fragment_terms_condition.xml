@@ -75,12 +75,12 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="15dp"
-            android:background="@drawable/design_button_answer_count"
+            android:background="@color/colorRed"
             android:elevation="5dp"
             android:fontFamily="@font/montserrat"
             android:gravity="center_horizontal"
             android:text="@string/disclaimer"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/white_custom"
             android:textSize="20sp"
             android:textStyle="bold" />
 

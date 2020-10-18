@@ -38,6 +38,9 @@ public class HomeClassFourFragment extends Fragment implements View.OnClickListe
     private ImageButton multiplicationClicked;
     private ImageButton romanClicked;
 
+    private ImageButton verbClicked;
+    private ImageButton comparisionClicked;
+
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseFirestore firebaseFirestore;
@@ -74,10 +77,15 @@ public class HomeClassFourFragment extends Fragment implements View.OnClickListe
         multiplicationClicked = view.findViewById(R.id.image_button_multiplication_home_class_four);
         romanClicked = view.findViewById(R.id.image_button_roman_home_class_four);
 
+        verbClicked = view.findViewById(R.id.image_button_verb_english_four);
+        comparisionClicked = view.findViewById(R.id.image_button_comparision_english_four);
+
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
         multiplicationClicked.setOnClickListener(this);
         romanClicked.setOnClickListener(this);
+        verbClicked.setOnClickListener(this);
+        comparisionClicked.setOnClickListener(this);
     }
 
     private void setUserName() {
@@ -149,6 +157,12 @@ public class HomeClassFourFragment extends Fragment implements View.OnClickListe
                 break;
             case R.id.image_button_roman_home_class_four:
                 intent.putExtra("userClass", "romanfour");
+                break;
+            case R.id.image_button_verb_english_four:
+                intent.putExtra("userClass", "fourverbs");
+                break;
+            case R.id.image_button_comparision_english_four:
+                intent.putExtra("userClass", "fourdegree");
                 break;
         }
 
