@@ -14,7 +14,7 @@
         android:background="@drawable/design_button_answer_count"
         android:elevation="5dp"
         android:fontFamily="@font/montserrat"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:padding="7dp"
         android:paddingBottom="15dp"
         android:text="@string/performace"

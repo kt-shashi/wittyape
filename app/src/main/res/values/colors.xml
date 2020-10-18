@@ -10,5 +10,12 @@
     <color name="black_custom">#000000</color>
     <color name="grey_custom">#f0f0f0</color>
     <color name="colorRed">#D63031</color>
+    <color name="colorRed2">#E71C23</color>
     <color name="colorGreen">#2ecc72</color>
+    <color name="colorGreenDark">#10A881</color>
+    <color name="colorPink">#E74292</color>
+    <color name="colorLightGrey">#758AA2</color>
+    <color name="colorViolet">#BB2CD9</color>
+    <color name="colorDarkYellow">#F4C724</color>
+    <color name="colorOrange">#df7701</color>
 </resources>

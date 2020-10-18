@@ -210,6 +210,10 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
             textViewHeading.setText("Enter the antonym of:");
         } else if (heading.equals("oneadjectives")) {
             textViewHeading.setText("Find the adjective in the sentence:");
+        } else if (heading.equals("twoarticle")) {
+            textViewHeading.setText("Identify the article in the sentence:");
+        } else if (heading.equals("twoplurals")) {
+            textViewHeading.setText("Write down the plural of the word:");
         }
     }
 
@@ -220,7 +224,10 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
         String userClassName = null;
         if (heading.equals("onebabies") || heading.equals("oneopposite") || heading.equals("oneadjectives")) {
             userClassName = "scoreclass1";
+        } else if (heading.equals("twoarticle") || heading.equals("twoplurals")) {
+            userClassName = "scoreclass2";
         }
+
         if (userClassName == null || userClassName.isEmpty())
             userClassName = "scoreclass1";
 

@@ -286,7 +286,41 @@ class CustomPageAdapter extends FragmentPagerAdapter {
                     return null;
             }
 
-        } else {
+        } else if (userClass.equals("twoarticle")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "twoarticle");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
+        }else if (userClass.equals("twoplurals")) {
+
+            switch (position) {
+                case 0:
+                    return new LearnEnglishOneAnimalBaby();
+                case 1:
+                    PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
+
+                    Bundle arguments = new Bundle();
+                    arguments.putString("dbname", "twoplurals");
+                    practiceEnglishFragment.setArguments(arguments);
+
+                    return practiceEnglishFragment;
+                default:
+                    return null;
+            }
+
+        }else {
             return null;
         }
 

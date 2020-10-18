@@ -12,7 +12,7 @@
         android:fillColor="@color/grey_custom"
         android:pathData="M120 264c-61.855469 0-112 50.144531-112 112s50.144531 112 112 112 112-50.144531 112-112-50.144531-112-112-112zm48 160-48-48-48 48 48-48-48-48 48 48 48-48-48 48zm0 0" />
     <path
-        android:fillColor="@color/light_blue_custom"
+        android:fillColor="@color/colorPrimary"
         android:pathData="M376 8c-61.855469 0-112 50.144531-112 112s50.144531 112 112 112 112-50.144531 112-112-50.144531-112-112-112zm-64 112" />
     <path
         android:fillColor="@color/grey_custom"

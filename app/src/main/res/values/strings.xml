@@ -100,6 +100,8 @@
     <string name="next">Next</string>
     <string name="opposite_words">Antonyms</string>
     <string name="adjective">Adjectives</string>
+    <string name="articles">Articles</string>
+    <string name="plurals">Plurals</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

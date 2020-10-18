@@ -39,6 +39,9 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
     private ImageButton multiplicationClicked;
     private ImageButton romanClicked;
 
+    private ImageButton articleClicked;
+    private ImageButton pluralClicked;
+
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseFirestore firebaseFirestore;
@@ -76,11 +79,18 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
         multiplicationClicked = view.findViewById(R.id.image_button_multiplication_home_class_two);
         romanClicked = view.findViewById(R.id.image_button_roman_home_class_two);
 
+        articleClicked = view.findViewById(R.id.image_button_articles_enlish_two);
+        pluralClicked = view.findViewById(R.id.image_button_plural_enlish_two);
+
         countingClicked.setOnClickListener(this);
         additionClicked.setOnClickListener(this);
         subtractionClicked.setOnClickListener(this);
         multiplicationClicked.setOnClickListener(this);
         romanClicked.setOnClickListener(this);
+
+        articleClicked.setOnClickListener(this);
+        pluralClicked.setOnClickListener(this);
+
     }
 
     private void setUserName() {
@@ -156,6 +166,13 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
             case R.id.image_button_roman_home_class_two:
                 intent.putExtra("userClass", "romantwo");
                 break;
+            case R.id.image_button_articles_enlish_two:
+                intent.putExtra("userClass", "twoarticle");
+                break;
+            case R.id.image_button_plural_enlish_two:
+                intent.putExtra("userClass", "twoplurals");
+                break;
+
         }
 
         startActivity(intent);

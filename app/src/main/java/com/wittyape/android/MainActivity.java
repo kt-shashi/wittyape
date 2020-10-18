@@ -41,6 +41,7 @@ import com.wittyape.android.classone.HomeClassOneFragment;
 import com.wittyape.android.classone.MathsClassOneFragment;
 import com.wittyape.android.classthree.HomeClassThreeFragment;
 import com.wittyape.android.classthree.MathsClassThreeFragment;
+import com.wittyape.android.classtwo.EnglishClassTwoFragment;
 import com.wittyape.android.classtwo.HomeClassTwoFragment;
 import com.wittyape.android.classtwo.MathsClassTwoFragment;
 import com.wittyape.android.helpfeedback.AboutFragment;
@@ -244,6 +245,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 case R.id.menu_item_maths:
                     fragment = new MathsClassTwoFragment();
+                    break;
+
+                case R.id.menu_item_english:
+                    fragment = new EnglishClassTwoFragment();
                     break;
 
                 case R.id.menu_item_syllabus:
