@@ -1,10 +1,9 @@
 package com.wittyape.android;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
-import android.util.Log;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -29,7 +28,6 @@ public class TabActivity extends AppCompatActivity {
         userClass = getIntent().getStringExtra("userClass");
 
         if (userClass == null || userClass.isEmpty()) {
-            Log.d("shashi", "Null/Empty");
             userClass = "countingone";
         }
 
