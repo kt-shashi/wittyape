@@ -164,6 +164,9 @@ public class SignUpFragment extends Fragment implements View.OnClickListener, Ad
         if (userPass.isEmpty()) {
             textInputLayoutPassword.setError("Cannot be empty");
             return false;
+        } else if (userPass.length() < 6) {
+            textInputLayoutPassword.setError("Length must be 6 characters long");
+            return false;
         } else {
             textInputLayoutPassword.setError(null);
         }
