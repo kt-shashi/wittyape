@@ -227,9 +227,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new TermsConditionFragment();
                     break;
 
-                case R.id.menu_item_exit:
-                    finish();
-
             }
 
         } else if (userClass.equals("Class2")) {
@@ -267,9 +264,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.menu_item_terms_condition:
                     fragment = new TermsConditionFragment();
                     break;
-
-                case R.id.menu_item_exit:
-                    finish();
 
             }
 
@@ -309,9 +303,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     fragment = new TermsConditionFragment();
                     break;
 
-                case R.id.menu_item_exit:
-                    finish();
-
             }
 
         } else if (userClass.equals("Class4")) {
@@ -349,9 +340,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.menu_item_terms_condition:
                     fragment = new TermsConditionFragment();
                     break;
-
-                case R.id.menu_item_exit:
-                    finish();
 
             }
 

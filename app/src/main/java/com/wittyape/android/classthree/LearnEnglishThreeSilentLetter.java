@@ -1,4 +1,4 @@
-package com.wittyape.android.classone;
+package com.wittyape.android.classthree;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,15 +11,15 @@ import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
 
-public class LearnEnglishOneAnimalBaby extends Fragment {
+public class LearnEnglishThreeSilentLetter extends Fragment {
 
-    public LearnEnglishOneAnimalBaby() {
+    public LearnEnglishThreeSilentLetter() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.learn_english_animalbaby_one, container, false);
+        return inflater.inflate(R.layout.learn_english_silent_letter_three, container, false);
     }
 }

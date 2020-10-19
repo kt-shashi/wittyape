@@ -181,14 +181,14 @@ public class PracticeMathsTwoMultiply extends Fragment implements View.OnClickLi
 
     private void startCountDown() {
 
-        countDownTimer = new CountDownTimer(10100, 1000) {
+        countDownTimer = new CountDownTimer(30100, 1000) {
 
             @Override
             public void onTick(long l) {
 
                 long timeLeft = l / 1000;
 
-                if (timeLeft <= 5) {
+                if (timeLeft <= 10) {
                     textViewTimer.setTextColor(Color.RED);
                 }
 

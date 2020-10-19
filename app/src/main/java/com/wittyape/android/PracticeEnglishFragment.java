@@ -1,11 +1,11 @@
-package com.wittyape.android.classone;
+package com.wittyape.android;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +23,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.wittyape.android.R;
 import com.wittyape.android.helperclasses.QuestionModel;
 import com.wittyape.android.leaderboard.LeaderboardModel;
 
@@ -39,6 +38,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
 
     private TextView textViewHeading;
     private TextView textViewQuestion;
+    private ProgressBar progressBar;
     private TextInputLayout textInputLayoutAnswer;
     private Button buttonCheck;
     private Button buttonNext;
@@ -52,11 +52,11 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
     private CollectionReference collectionReference;
     private FirebaseAuth firebaseAuth;
 
-    public static final String COLLECTION_NAME = "users";
+    private static final String COLLECTION_NAME = "users";
 
     private String heading;
 
-    boolean isAnswered = false;
+    private boolean isAnswered = false;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -86,6 +86,8 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
     private void initViews(View view) {
         textViewHeading = view.findViewById(R.id.text_view_heading_english);
         textViewQuestion = view.findViewById(R.id.text_view_question_english);
+        progressBar = view.findViewById(R.id.progressBar_english);
+        progressBar.setVisibility(View.GONE);
         textInputLayoutAnswer = view.findViewById(R.id.text_input_layout_answer_english);
         buttonCheck = view.findViewById(R.id.button_check_english);
         buttonNext = view.findViewById(R.id.button_next_english);
@@ -167,6 +169,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
     }
 
     private void setData(ArrayList<QuestionModel> dataList) {
+        progressBar.setVisibility(View.GONE);
         buttonRetry.setVisibility(View.GONE);
         questionList = dataList;
 
@@ -174,6 +177,8 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
     }
 
     private void getData() {
+
+        progressBar.setVisibility(View.VISIBLE);
 
         final ArrayList<QuestionModel> custom = new ArrayList<>();
 
@@ -197,7 +202,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Could not load data", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -205,23 +210,23 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
 
     private void setHeading() {
         if (heading.equals("onebabies")) {
-            textViewHeading.setText("Enter the baby name of the animal:");
+            textViewHeading.setText(R.string.question_english_animalbaby);
         } else if (heading.equals("oneopposite")) {
-            textViewHeading.setText("Enter the antonym of:");
+            textViewHeading.setText(R.string.question_english_antonym);
         } else if (heading.equals("oneadjectives")) {
-            textViewHeading.setText("Find the adjective in the sentence:");
+            textViewHeading.setText(R.string.question_english_adjective);
         } else if (heading.equals("twoarticle")) {
-            textViewHeading.setText("Identify the article in the sentence:");
+            textViewHeading.setText(R.string.question_english_articles);
         } else if (heading.equals("twoplurals")) {
-            textViewHeading.setText("Write down the plural of the word:");
+            textViewHeading.setText(R.string.question_english_plural);
         } else if (heading.equals("threesilent")) {
-            textViewHeading.setText("Which letter is silent in the word:");
+            textViewHeading.setText(R.string.question_english_silentletter);
         } else if (heading.equals("threesound")) {
-            textViewHeading.setText("Write the name of sound this animal makes:");
+            textViewHeading.setText(R.string.question_english_animalsound);
         } else if (heading.equals("fourverbs")) {
-            textViewHeading.setText("Identify the verb in the sentence:");
+            textViewHeading.setText(R.string.question_english_evrb);
         } else if (heading.equals("fourdegree")) {
-            textViewHeading.setText("Identify words with degree of comparision:");
+            textViewHeading.setText(R.string.question_english_comparison);
         }
     }
 
@@ -283,7 +288,7 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Could not save score", Toast.LENGTH_SHORT).show();
                     }
                 });
 

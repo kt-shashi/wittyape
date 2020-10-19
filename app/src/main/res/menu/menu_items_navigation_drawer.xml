@@ -60,11 +60,6 @@
                 android:icon="@drawable/icon_terms_condition"
                 android:title="@string/terms_condition" />
 
-            <item
-                android:id="@+id/menu_item_exit"
-                android:icon="@drawable/icon_exit"
-                android:title="@string/exit" />
-
         </menu>
 
     </item>

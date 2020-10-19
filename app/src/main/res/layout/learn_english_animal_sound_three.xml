@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/design_button_answer_count"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_horizontal"
+            android:text="@string/animal_sounds"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_audio_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/cat_meow"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_audio_cow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/cow_moo"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_audio_crow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/crow_caw"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_audio_dog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/dog_bark"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_audio_duck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/duck_quack"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_audio_wolf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/design_button_login"
+            android:drawableStart="@drawable/icon_audio_play"
+            android:drawablePadding="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:text="@string/wolf_howl"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_custom"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/resource_english_animal_sound"
+            android:textColor="@color/black_custom"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+</ScrollView>

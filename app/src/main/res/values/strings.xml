@@ -90,7 +90,7 @@
     <string name="class_two_syllabus_english">Articles\nPlurals</string>
     <string name="class_three">Class 3</string>
     <string name="class_three_syllabus_maths">Addition [Double digit numbers]\nSubtraction [Double digit numbers]\nRoman numerals [1 to 50]\nMultiplication [Single digit numbers, 1 to 6]\nMultiplication table : [1 to 6]</string>
-    <string name="class_three_syllabus_english">Animal sounds\nSilent words</string>
+    <string name="class_three_syllabus_english">Animal sounds\nSilent letters</string>
     <string name="class_four">Class 4</string>
     <string name="class_four_syllabus_maths">Addition [Double digit numbers]\nSubtraction [Double digit numbers]\nRoman numerals [1 to 50]\nMultiplication table [1 to 10]</string>
     <string name="class_four_syllabus_english">Verbs\nDegree of Comparison</string>
@@ -112,6 +112,30 @@
     <string name="animal_sounds">Animal sounds</string>
     <string name="verb">Verb</string>
     <string name="degrees_of_comparison">Degrees of\nComparison</string>
+    <string name="question_english_animalbaby">Enter the baby name of the animal:</string>
+    <string name="question_english_antonym">Enter the antonym of:</string>
+    <string name="question_english_adjective">Find the adjective in the sentence:</string>
+    <string name="question_english_articles">Identify the article in the sentence:</string>
+    <string name="question_english_plural">Write down the plural of the word:</string>
+    <string name="question_english_silentletter">Which letter is silent in the word:</string>
+    <string name="question_english_animalsound">Write the name of sound this animal makes:</string>
+    <string name="question_english_evrb">Identify the verb in the sentence:</string>
+    <string name="question_english_comparison">Identify words with degree of comparison:</string>
+    <string name="resource_english_animalbaby">Here’s a list of some baby animal names:\n\nCat - kitten\nTiger - cub\nDeer - fawn\nChicken - chick\nDog - puppy\nDuck - duckling\nLion - cub\nPig - piglet\nSheep - lamb\nMonkey - infant\n</string>
+    <string name="resource_english_antonyms">Antonym is a word opposite in meaning to another.\n\nHere’s a list of a few antonyms-\n\nHot - Cold\nFew - Many\nEast - West\nMan - Woman\nWin - Lose\nBlack - White\nQuestion - Answer\nHard - Easy\nPoor - Rich\nLittle - Big\n</string>
+    <string name="resource_english_adjective">A word that describes a noun or pronoun is an adjective.\nIn the sentence ‘This shop has the best samosas’, ‘best’ is an adjective.\n\nLet’s see a few more examples of how adjectives are used in sentences.\n\nThe dog found a large bone.\nlarge\nShe wore a beautiful dress.\nbeautiful\nShashi is a good man.\ngood\nThis glass is strong.\nstrong\nThis is a big box.\nbig\nMy job is worse than yours.\nworse\nShashi is really clever.\nclever\nThe doctor is late.\nlate\nThe house is bigger than other ones.\nbigger\nHe is angry.\nangry</string>
+    <string name="resource_english_articles">"English has two articles: the and a/an. A/an is used to modify nouns, whereas the is used to refer to nouns.\n\nHere’s how we use them in sentences:\n\nUsing - a\n\nI need a book.\nThey bought a computer.\nMy friend has a pet dog.\nShe saw a movie last night.\n\nUsing - an\n\nShashi has an idea.\nShe ate an apple.\nI eat an apple everyday.\nHe is an honest person.\n\nUsing - the\n\nThe Moon rotates around the Earth.\nThe sun is brighter than the Moon "</string>
+    <string name="resource_english_plural">Plural denotes a quantity more than one.\n\nHere’s a list of some few plural words:\n\nPuppy - puppies\nTooth - teeth\nMouse - mice\nMan - men\nWoman - women\nCity - cities\nSpy - spies\nBaby - babies\nWolf - wolves\nKnife - knives\n</string>
+    <string name="resource_english_silent">A silent letter is a letter that does not correspond to any sound in the word\'s pronunciation.\n\nHere are a few examples of words with their silent letters.\n\nKnee - k\nTwo - w\nWhere - h\nNestle - t\nLamb - b\nBomb - b\nSchool - h\nHonest - h\nMatch - t\nListen - t\n</string>
+    <string name="resource_english_animal_sound">Here’s a list of a some other animal sound names.\n\nFox - yelp\nBull - bellow\nBee - buzz\nOwl - hoot</string>
+    <string name="resource_english_verb">Verbs are the action words in a sentence that describe what the subject is doing.\n\nTo help you understand with ease, we have identified verbs in the sentences.\n\nThe baby is playing with blocks.\nplaying\nMy mom cooks a yummy meal every day.\ncooks\nWe began to climb the hill.\nclimb\nShe is drawing a picture\ndrawing\nHe writes his name on the desk.\nwrites\nShe ran across the garden.\nran\nThe Sun rises from the East.\nrises\nBirds build their nests.\nbuild\nThey play with a ball.\nplay\nThe boy closed the door.\nclosed</string>
+    <string name="resource_english_comparision">Adjectives describe a quality or characteristic of a noun or pronoun. The basic form of an adjective is known as positive degree.\nAdjectives can be changed to compare a quality between two nouns, this form is known as the comparative degree.\nWe can also change an adjective to identify a noun with the highest degree of an attribute among a group, this is known as the superlative degree.\n\nExample of Positive to Comparative degree\n\nTall - more tall\nBig - bigger\nSmall - smaller\n\nExample of Positive to Superlative degree\n\nTall - tallest\nBig - biggest\nSmall - smallest</string>
+    <string name="cat_meow">Cat - Meow</string>
+    <string name="cow_moo">Cow - Moo</string>
+    <string name="crow_caw">Crow - Caw</string>
+    <string name="dog_bark">Dog - Bark</string>
+    <string name="duck_quack">Duck - Quack</string>
+    <string name="wolf_howl">Wolf - Howl</string>
     <string-array name="class_selector">]
         <item>Select</item>
         <item>Class1</item>

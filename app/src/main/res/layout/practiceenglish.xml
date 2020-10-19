@@ -36,6 +36,16 @@
         app:layout_constraintRight_toRightOf="@id/text_view_heading_english"
         app:layout_constraintTop_toBottomOf="@id/text_view_heading_english" />
 
+    <ProgressBar
+        android:id="@+id/progressBar_english"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_question_english"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_question_english"
+        app:layout_constraintStart_toStartOf="@+id/text_view_question_english"
+        app:layout_constraintTop_toTopOf="@+id/text_view_question_english" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_answer_english"
         android:layout_width="0dp"

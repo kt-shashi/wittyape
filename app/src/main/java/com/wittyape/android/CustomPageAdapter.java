@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.wittyape.android.classfour.LearnEnglishFourComparison;
+import com.wittyape.android.classfour.LearnEnglishFourVerb;
 import com.wittyape.android.classfour.LearnMathsFourAdd;
 import com.wittyape.android.classfour.LearnMathsFourMultiply;
 import com.wittyape.android.classfour.LearnMathsFourRoman;
@@ -15,14 +17,17 @@ import com.wittyape.android.classfour.PracticeMathsFourAdd;
 import com.wittyape.android.classfour.PracticeMathsFourMultiply;
 import com.wittyape.android.classfour.PracticeMathsFourRoman;
 import com.wittyape.android.classfour.PracticeMathsFourSubtract;
+import com.wittyape.android.classone.LearnEnglishOneAdjective;
 import com.wittyape.android.classone.LearnEnglishOneAnimalBaby;
+import com.wittyape.android.classone.LearnEnglishOneAntonym;
 import com.wittyape.android.classone.LearnMathsOneAdd;
 import com.wittyape.android.classone.LearnMathsOneCount;
 import com.wittyape.android.classone.LearnMathsOneSubtract;
-import com.wittyape.android.classone.PracticeEnglishFragment;
 import com.wittyape.android.classone.PracticeMathsOneAdd;
 import com.wittyape.android.classone.PracticeMathsOneCount;
 import com.wittyape.android.classone.PracticeMathsOneSubtract;
+import com.wittyape.android.classthree.LearnEnglishThreeAnimalSound;
+import com.wittyape.android.classthree.LearnEnglishThreeSilentLetter;
 import com.wittyape.android.classthree.LearnMathsThreeAdd;
 import com.wittyape.android.classthree.LearnMathsThreeMultiply;
 import com.wittyape.android.classthree.LearnMathsThreeRoman;
@@ -31,6 +36,8 @@ import com.wittyape.android.classthree.PracticeMathsThreeAdd;
 import com.wittyape.android.classthree.PracticeMathsThreeMultiply;
 import com.wittyape.android.classthree.PracticeMathsThreeRoman;
 import com.wittyape.android.classthree.PracticeMathsThreeSubtract;
+import com.wittyape.android.classtwo.LearnEnglishTwoArticle;
+import com.wittyape.android.classtwo.LearnEnglishTwoPlural;
 import com.wittyape.android.classtwo.LearnMathsTwoAdd;
 import com.wittyape.android.classtwo.LearnMathsTwoCount;
 import com.wittyape.android.classtwo.LearnMathsTwoMultiply;
@@ -41,7 +48,6 @@ import com.wittyape.android.classtwo.PracticeMathsTwoCount;
 import com.wittyape.android.classtwo.PracticeMathsTwoMultiply;
 import com.wittyape.android.classtwo.PracticeMathsTwoRoman;
 import com.wittyape.android.classtwo.PracticeMathsTwoSubtract;
-import com.wittyape.android.leaderboard.LeaderboardFragment;
 
 class CustomPageAdapter extends FragmentPagerAdapter {
 
@@ -256,7 +262,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishOneAntonym();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -273,7 +279,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishOneAdjective();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -290,7 +296,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishTwoArticle();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -307,7 +313,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishTwoPlural();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -324,7 +330,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishThreeSilentLetter();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -341,7 +347,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishThreeAnimalSound();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -358,7 +364,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishFourVerb();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 
@@ -375,7 +381,7 @@ class CustomPageAdapter extends FragmentPagerAdapter {
 
             switch (position) {
                 case 0:
-                    return new LearnEnglishOneAnimalBaby();
+                    return new LearnEnglishFourComparison();
                 case 1:
                     PracticeEnglishFragment practiceEnglishFragment = new PracticeEnglishFragment();
 

@@ -11,15 +11,15 @@ import androidx.fragment.app.Fragment;
 
 import com.wittyape.android.R;
 
-public class LearnEnglishOneAnimalBaby extends Fragment {
+public class LearnEnglishOneAdjective extends Fragment {
 
-    public LearnEnglishOneAnimalBaby() {
+    public LearnEnglishOneAdjective() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.learn_english_animalbaby_one, container, false);
+        return inflater.inflate(R.layout.learn_english_adjective_one, container, false);
     }
 }
