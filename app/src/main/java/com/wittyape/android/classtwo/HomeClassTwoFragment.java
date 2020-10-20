@@ -130,7 +130,7 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
 
                             } else {
                                 progressBar.setVisibility(View.GONE);
-                                Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Something went wrong while loading Display Name", Toast.LENGTH_SHORT).show();
                             }
                         }
                     })
@@ -138,7 +138,7 @@ public class HomeClassTwoFragment extends Fragment implements View.OnClickListen
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressBar.setVisibility(View.GONE);
-                            Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Could not load Display name at this moment", Toast.LENGTH_SHORT).show();
                         }
                     });
 

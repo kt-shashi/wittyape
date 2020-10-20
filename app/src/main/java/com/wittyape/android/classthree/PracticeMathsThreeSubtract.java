@@ -307,7 +307,7 @@ public class PracticeMathsThreeSubtract extends Fragment implements View.OnClick
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Something went wrong while uploading score", Toast.LENGTH_SHORT).show();
                     }
                 });
 

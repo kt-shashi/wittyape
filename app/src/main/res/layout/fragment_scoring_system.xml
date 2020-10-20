@@ -54,7 +54,6 @@
             android:textColor="@color/black_custom"
             android:textSize="18sp" />
 
-
     </LinearLayout>
 
 </ScrollView>

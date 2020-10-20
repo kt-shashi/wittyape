@@ -1,6 +1,9 @@
 package com.wittyape.android;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,8 +26,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -33,6 +38,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.wittyape.android.classfour.EnglishClassFourFragment;
 import com.wittyape.android.classfour.HomeClassFourFragment;
 import com.wittyape.android.classfour.MathsClassFourFragment;
@@ -107,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
+        setupNotfication();
     }
 
     private void getUserClass() {
@@ -162,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                             } else {
                                 progressBar.setVisibility(View.GONE);
-                                Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Could not load class", Toast.LENGTH_SHORT).show();
                             }
                         }
                     })
@@ -170,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressBar.setVisibility(View.GONE);
-                            Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Something went wrong while loading data", Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -345,7 +352,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (fragment == null) {
-            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Could not laod menu", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -574,5 +581,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    private void setupNotfication() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("notifywittyape", "notifywittyape", NotificationManager.IMPORTANCE_DEFAULT);
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        FirebaseMessaging.getInstance().subscribeToTopic("allusers")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "Successful";
+                        if (!task.isSuccessful()) {
+                            msg = "Failed";
+                        }
+                    }
+                });
     }
 }

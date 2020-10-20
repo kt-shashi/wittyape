@@ -38,11 +38,11 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "shashiofficial10@gmail.com"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "coding.shashi@gmail.com"));
             startActivity(intent);
         } catch (ActivityNotFoundException e) {
             //TODO smth
-            Toast.makeText(getActivity(), "Something went wrong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Could not mail the developer", Toast.LENGTH_SHORT).show();
         }
     }
 }

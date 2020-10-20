@@ -94,7 +94,7 @@ public class LeaderboardFragment extends Fragment {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Failed to load", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Could not load leaderboard at this moment", Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                     }
                 });
