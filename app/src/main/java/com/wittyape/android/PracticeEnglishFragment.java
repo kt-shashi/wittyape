@@ -131,6 +131,9 @@ public class PracticeEnglishFragment extends Fragment implements View.OnClickLis
                     textInputLayoutAnswer.setError("Question not solved");
                     return;
                 }
+                if (!isAnswered && textInputLayoutAnswer.getEditText().getText().toString().trim().toLowerCase().equals(questionList.get(questionCount).getAnswer())) {
+                    solvedCount++;
+                }
                 isAnswered = false;
                 buttonCheck.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 buttonCheck.setBackgroundResource(R.drawable.design_button_login);
