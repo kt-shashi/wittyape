@@ -56,6 +56,7 @@ import com.wittyape.android.helpfeedback.ScoringSystem;
 import com.wittyape.android.helpfeedback.SyllabusFragment;
 import com.wittyape.android.helpfeedback.TermsConditionFragment;
 import com.wittyape.android.leaderboard.LeaderboardFragment;
+import com.wittyape.android.leaderboard.LeaderboardModel;
 import com.wittyape.android.login.LoginActivity;
 
 import java.util.HashMap;
@@ -471,7 +472,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    private void saveNewData(String newUserName, String userClassChanged) {
+    private void saveNewData(final String newUserName, String userClassChanged) {
 
         Map<String, Object> data = new HashMap<>();
         data.put("name", newUserName);
@@ -491,6 +492,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Snackbar snackbar = Snackbar.make(linearLayout, "Updated", Snackbar.LENGTH_LONG);
                         snackbar.show();
 
+                        changeLeaderboardName(newUserName);
+
                         getUserClass();
 
                     }
@@ -500,6 +503,53 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     public void onFailure(@NonNull Exception e) {
                         progressBarUpdate.setVisibility(View.GONE);
                         Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+    }
+
+    private void changeLeaderboardName(final String updatedUsername) {
+        final CollectionReference collectionReferenceLeaderboard;
+
+        if (userClass.equals("Class1"))
+            collectionReferenceLeaderboard = firebaseFirestore.collection("scoreclass1");
+        else if (userClass.equals("Class2"))
+            collectionReferenceLeaderboard = firebaseFirestore.collection("scoreclass2");
+        else if (userClass.equals("Class3"))
+            collectionReferenceLeaderboard = firebaseFirestore.collection("scoreclass3");
+        else
+            collectionReferenceLeaderboard = firebaseFirestore.collection("scoreclass4");
+
+        firebaseFirestore
+                .collection(COLLECTION_NAME)
+                .document(firebaseAuth.getCurrentUser().getUid())
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                        //Check if the document exists
+                        if (documentSnapshot.exists()) {
+
+                            String userScore = documentSnapshot.getString("score");
+
+                            if (userScore.isEmpty()) {
+                                userScore = "0";
+                            }
+
+                            LeaderboardModel leaderboardModel = new LeaderboardModel(updatedUsername, String.valueOf(userScore));
+
+                            collectionReferenceLeaderboard
+                                    .document(firebaseAuth.getCurrentUser().getUid())
+                                    .set(leaderboardModel);
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "Something went wrong while updating name in Leaderboard", Toast.LENGTH_SHORT).show();
                     }
                 });
 
