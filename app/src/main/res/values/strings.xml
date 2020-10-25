@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Wittyape</string>
     <string name="sign_in">Sign-In</string>
-    <string name="email">Email</string>
+    <string name="email">Parent\'s Email</string>
     <string name="password">Password</string>
     <string name="sign_up">Sign-Up</string>
     <string name="helping_kids_excel">Helping Kids Excel</string>
@@ -26,7 +26,7 @@
     <string name="addition">Addition</string>
     <string name="subtraction">Subtraction</string>
     <string name="ready_to_learn">Ready to learn?</string>
-    <string name="choose_class">Select your class</string>
+    <string name="choose_class">Select level</string>
     <string name="update">Update</string>
     <string name="log_out">Log out</string>
     <string name="loading_display_name">Loading display name</string>
