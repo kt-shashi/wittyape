@@ -32,6 +32,9 @@ For ease of use and maximum learning, Wittyape hosts many features:<br><br>
 <hr>
 <br>
 
+</div>
+<div align="center">
+
 ## Download apk
 <br>
 
@@ -40,6 +43,9 @@ For ease of use and maximum learning, Wittyape hosts many features:<br><br>
 <br>
 <hr>
 <br>
+
+</div>
+<div align="left">
 
 ## Screenshots
 <br>
