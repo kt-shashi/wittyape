@@ -32,6 +32,15 @@ For ease of use and maximum learning, Wittyape hosts many features:<br><br>
 <hr>
 <br>
 
+## Download apk
+<br>
+
+[Click here](https://github.com/shashiofficial/wittyape/raw/master/apk/Wittyape.apk)
+
+<br>
+<hr>
+<br>
+
 ## Screenshots
 <br>
 
