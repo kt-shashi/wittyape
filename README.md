@@ -143,6 +143,3 @@ Wittyape covers a wide spectrum of syllabus relevant for classes 1 till 4.
 
 ## Website 
 <br>
-
-For more free resources and **worksheets**, visit https://wittyape.com/
-
